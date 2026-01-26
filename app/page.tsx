@@ -1,17 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-
 export default function Home() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play().catch(() => {
-        // Autoplay might be blocked, ignore error
-      });
-    }
-  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-stone-900 via-stone-800 to-stone-900">
@@ -34,16 +23,15 @@ export default function Home() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Video Background */}
         <div className="absolute inset-0 z-0">
-          <video
-            ref={videoRef}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover"
-          >
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-forest-50578-large.mp4" type="video/mp4" />
-          </video>
+          <iframe 
+            src="https://zeacon.com/player/5a24c184-6cf9-451f-88ae-87256060f95d" 
+            title="Zeacon | Embed Video" 
+            width="100%" 
+            height="100%" 
+            allowFullScreen 
+            style={{ border: '0px' }}
+            className="w-full h-full"
+          />
           {/* Overlay gradient for readability */}
           <div className="absolute inset-0 bg-gradient-to-b from-stone-900/70 via-stone-900/50 to-stone-900/80"></div>
           <div className="absolute inset-0 backdrop-blur-[2px]"></div>
@@ -51,9 +39,9 @@ export default function Home() {
 
         {/* Hero Content */}
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto animate-fade-in">
-          <h2 className="text-7xl md:text-8xl font-bold text-white mb-6 leading-tight tracking-tight animate-slide-up">
+          <h2 className="text-7xl md:text-8xl font-bold text-white/80 mb-6 leading-tight tracking-tight animate-slide-up">
             APEX AERIAL<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-300 to-amber-500 animate-gradient">
+            <span className="text-white/80">
               IMAGING
             </span>
           </h2>
