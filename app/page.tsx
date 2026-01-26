@@ -19,9 +19,9 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section with Video Background */}
+      {/* Hero Section with Iframe Background */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Video Background */}
+        {/* Iframe Background */}
         <div className="absolute inset-0 z-0">
           <iframe 
             src="https://zeacon.com/player/5a24c184-6cf9-451f-88ae-87256060f95d" 
