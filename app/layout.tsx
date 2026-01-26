@@ -3,8 +3,8 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "FPV Cinematic Drone Filming | Professional Aerial Videography",
-  description: "Professional FPV cinematic drone filming services. Specializing in high-quality aerial videography with custom bundles for events, real estate, and commercial projects.",
+  title: "Apex Aerial Imaging | Professional Aerial Photography & Videography",
+  description: "Apex Aerial Imaging - Professional aerial photography and videography services. Capturing stunning perspectives from above with cinematic quality and natural artistry.",
 };
 
 export default function RootLayout({
