@@ -22,6 +22,11 @@ export default function RootLayout({
           id="zeacon-sdk"
           src="https://zeacon.com/sdk/correlator.js?api-key=22b37205-4d63-4270-9992-9557d2dbdaaa"
         />
+        <Script
+          id="zeacon-sdk-correlation-manager"
+          type="text/javascript"
+          src="https://zeacon.com/sdk/correlation-manager/bundle.js"
+        />
         {/* End of Zeacon Code */}
         {children}
       </body>
