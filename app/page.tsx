@@ -364,7 +364,7 @@ export default function Home() {
                       <div className="mt-10 flex flex-col gap-12 text-left text-sm text-white/80 md:grid md:grid-cols-3 md:gap-10">
                         <div className="space-y-3">
                           <span className="font-mono text-[10px] uppercase tracking-[0.35em] text-white/50">Inquiries</span>
-                          <a href="mailto:hello@apex.com" className="block text-white hover:text-white/70">hello@apex.com</a>
+                          <a href="mailto:rowkav0809@highgateschool.org.uk" className="block text-white hover:text-white/70">rowkav0809@highgateschool.org.uk</a>
                           <a href="tel:+15550000000" className="block text-white hover:text-white/70">+1 (555) 000-0000</a>
                         </div>
                         <div className="space-y-3">
@@ -378,13 +378,13 @@ export default function Home() {
                         <div className="space-y-3">
                           <span className="font-mono text-[10px] uppercase tracking-[0.35em] text-white/50">Network</span>
                           <div className="flex flex-col gap-2">
-                            <a href="#" className="flex items-center gap-2 hover:text-white">
+                            <a href="https://instagram.com/rowkav09" className="flex items-center gap-2 hover:text-white">
                               Instagram <span>↗</span>
                             </a>
-                            <a href="#" className="flex items-center gap-2 hover:text-white">
+                            <a href="https://linkedin.com/in/rowkav09" className="flex items-center gap-2 hover:text-white">
                               LinkedIn <span>↗</span>
                             </a>
-                            <a href="#" className="flex items-center gap-2 hover:text-white">
+                            <a href="https://vimeo.com/rowkav09" className="flex items-center gap-2 hover:text-white">
                               Vimeo <span>↗</span>
                             </a>
                           </div>
