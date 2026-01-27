@@ -89,14 +89,14 @@ export default function Home() {
               </p>
             </div>
             <div className="group bg-emerald-950/50 backdrop-blur-md p-10 rounded-2xl border border-emerald-700/50 hover:border-green-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20 animate-scale-in">
-              <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300 animate-float" style={{ animationDelay: '0.5s' }}>🎥</div>
+              <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300 animate-float">🎥</div>
               <h4 className="text-2xl font-semibold text-white mb-4 group-hover:text-green-400 transition-colors">Cinematic Videos</h4>
               <p className="text-emerald-200 leading-relaxed">
                 Professional aerial videography with cinematic quality for commercials, real estate, and documentary projects.
               </p>
             </div>
             <div className="group bg-emerald-950/50 backdrop-blur-md p-10 rounded-2xl border border-emerald-700/50 hover:border-green-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20 animate-slide-in-right">
-              <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300 animate-float" style={{ animationDelay: '1s' }}>🌄</div>
+              <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300 animate-float">🌄</div>
               <h4 className="text-2xl font-semibold text-white mb-4 group-hover:text-green-400 transition-colors">Nature & Landscapes</h4>
               <p className="text-emerald-200 leading-relaxed">
                 Capturing the natural beauty of forests, mountains, coastlines, and wilderness areas with artistic precision.
