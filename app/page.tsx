@@ -23,10 +23,7 @@ export default function Home() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Iframe Background - Improved aspect ratio and sizing */}
         <div className="absolute inset-0 z-0 w-full h-full bg-slate-950">
-          <div className="absolute inset-0 w-full h-full" style={{ 
-            transform: 'scale(1.5)',
-            transformOrigin: 'center center'
-          }}>
+          <div className="absolute inset-0 w-full h-full scale-150">
             <iframe 
               src="https://zeacon.com/player/5a24c184-6cf9-451f-88ae-87256060f95d" 
               title="Zeacon | Embed Video" 
@@ -40,8 +37,7 @@ export default function Home() {
                 height: '100%', 
                 position: 'absolute', 
                 top: 0, 
-                left: 0,
-                objectFit: 'cover'
+                left: 0
               }}
               className="w-full h-full"
             />
