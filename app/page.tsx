@@ -3,17 +3,17 @@
 export default function Home() {
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-emerald-950 via-green-900 to-emerald-950">
+    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-emerald-900 to-slate-950">
       {/* Navigation */}
-      <nav className="fixed w-full bg-emerald-950/80 backdrop-blur-md z-50 border-b border-emerald-700/50 animate-slide-up">
+      <nav className="fixed w-full bg-slate-900/90 backdrop-blur-md z-50 border-b border-emerald-500/30 animate-slide-up shadow-lg">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <h1 className="text-2xl font-bold text-white tracking-wide">APEX AERIAL IMAGING</h1>
             <div className="flex gap-6">
-              <a href="#services" className="text-emerald-100 hover:text-green-400 transition-colors duration-300 transform hover:scale-110">Services</a>
-              <a href="#gallery" className="text-emerald-100 hover:text-green-400 transition-colors duration-300 transform hover:scale-110">Gallery</a>
-              <a href="#pricing" className="text-emerald-100 hover:text-green-400 transition-colors duration-300 transform hover:scale-110">Pricing</a>
-              <a href="#contact" className="text-emerald-100 hover:text-green-400 transition-colors duration-300 transform hover:scale-110">Contact</a>
+              <a href="#services" className="text-white hover:text-emerald-400 transition-colors duration-300 transform hover:scale-110 font-medium">Services</a>
+              <a href="#gallery" className="text-white hover:text-emerald-400 transition-colors duration-300 transform hover:scale-110 font-medium">Gallery</a>
+              <a href="#pricing" className="text-white hover:text-emerald-400 transition-colors duration-300 transform hover:scale-110 font-medium">Pricing</a>
+              <a href="#contact" className="text-white hover:text-emerald-400 transition-colors duration-300 transform hover:scale-110 font-medium">Contact</a>
             </div>
           </div>
         </div>
@@ -21,42 +21,51 @@ export default function Home() {
 
       {/* Hero Section with Iframe Background */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Iframe Background - Full Width with Minimal Blur */}
-        <div className="absolute inset-0 z-0 w-full h-full">
-          <iframe 
-            src="https://zeacon.com/player/5a24c184-6cf9-451f-88ae-87256060f95d" 
-            title="Zeacon | Embed Video" 
-            width="100%" 
-            height="100%" 
-            allowFullScreen 
-            style={{ border: '0px', width: '100%', height: '100%', position: 'absolute', top: 0, left: 0 }}
-            className="w-full h-full object-cover"
-          />
-          {/* Overlay gradient for readability with nature theme */}
-          <div className="absolute inset-0 bg-gradient-to-b from-emerald-950/60 via-green-900/40 to-emerald-950/70"></div>
-          <div className="absolute inset-0 backdrop-blur-[1px]"></div>
+        {/* Iframe Background - Improved aspect ratio and sizing */}
+        <div className="absolute inset-0 z-0 w-full h-full bg-slate-950">
+          <div className="absolute inset-0 w-full h-full scale-150">
+            <iframe 
+              src="https://zeacon.com/player/5a24c184-6cf9-451f-88ae-87256060f95d" 
+              title="Zeacon | Embed Video" 
+              width="100%" 
+              height="100%" 
+              allowFullScreen 
+              allow="autoplay; fullscreen"
+              style={{ 
+                border: '0px', 
+                width: '100%', 
+                height: '100%', 
+                position: 'absolute', 
+                top: 0, 
+                left: 0
+              }}
+              className="w-full h-full"
+            />
+          </div>
+          {/* Minimal overlay for text readability only */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60"></div>
         </div>
 
-        {/* Hero Content - More Opaque Text with Subtle Blur Background */}
+        {/* Hero Content - Enhanced text with better contrast */}
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto animate-fade-in">
-          <h2 className="text-7xl md:text-8xl font-bold text-white/95 mb-6 leading-tight tracking-tight animate-slide-up drop-shadow-[0_0_20px_rgba(0,0,0,0.5)]">
-            <span className="bg-emerald-900/20 backdrop-blur-sm px-6 py-3 rounded-2xl inline-block">
+          <h2 className="text-7xl md:text-8xl font-bold text-white mb-6 leading-tight tracking-tight animate-slide-up drop-shadow-[0_0_30px_rgba(0,0,0,0.8)]">
+            <span className="bg-slate-900/40 backdrop-blur-md px-6 py-3 rounded-2xl inline-block border border-emerald-500/30">
               APEX AERIAL
             </span>
             <br />
-            <span className="bg-emerald-900/20 backdrop-blur-sm px-6 py-3 rounded-2xl inline-block mt-4">
+            <span className="bg-slate-900/40 backdrop-blur-md px-6 py-3 rounded-2xl inline-block mt-4 border border-emerald-500/30">
               IMAGING
             </span>
           </h2>
-          <p className="text-2xl text-emerald-50 mb-12 max-w-3xl mx-auto font-light tracking-wide animate-slide-up-delay drop-shadow-lg">
+          <p className="text-2xl text-white mb-12 max-w-3xl mx-auto font-light tracking-wide animate-slide-up-delay drop-shadow-[0_0_20px_rgba(0,0,0,0.9)] bg-slate-900/30 backdrop-blur-sm py-4 px-6 rounded-xl">
             Capturing the world from above with breathtaking precision and artistry
           </p>
           <div className="flex gap-6 justify-center animate-slide-up-delay-2">
-            <a href="#gallery" className="group relative bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white px-10 py-5 rounded-full font-semibold transition-all transform hover:scale-105 shadow-2xl overflow-hidden animate-pulse">
+            <a href="#gallery" className="group relative bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white px-10 py-5 rounded-full font-semibold transition-all transform hover:scale-105 shadow-2xl overflow-hidden">
               <span className="relative z-10">View Our Work</span>
               <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
             </a>
-            <a href="#contact" className="bg-emerald-800/50 backdrop-blur-md hover:bg-emerald-700/60 text-white px-10 py-5 rounded-full font-semibold transition-all border border-emerald-600 hover:border-green-400 transform hover:scale-105 shadow-xl">
+            <a href="#contact" className="bg-slate-800/60 backdrop-blur-md hover:bg-slate-700/70 text-white px-10 py-5 rounded-full font-semibold transition-all border-2 border-emerald-500/50 hover:border-emerald-400 transform hover:scale-105 shadow-xl">
               Get in Touch
             </a>
           </div>
@@ -64,41 +73,41 @@ export default function Home() {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
-          <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          <svg className="w-8 h-8 text-emerald-400 drop-shadow-[0_0_10px_rgba(52,211,153,0.8)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </div>
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-24 px-6 bg-emerald-900/30 backdrop-blur-sm">
+      <section id="services" className="py-24 px-6 bg-slate-900/50 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
             <h3 className="text-5xl font-bold text-white mb-6 animate-scale-in">Our Services</h3>
-            <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-500 mx-auto mb-6 animate-scale-in-delay"></div>
-            <p className="text-emerald-100 text-xl max-w-2xl mx-auto animate-scale-in-delay-2">
+            <div className="w-24 h-1 bg-gradient-to-r from-emerald-400 to-green-500 mx-auto mb-6 animate-scale-in-delay"></div>
+            <p className="text-white text-xl max-w-2xl mx-auto animate-scale-in-delay-2">
               Specializing in aerial photography and videography for diverse industries
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="group bg-emerald-950/50 backdrop-blur-md p-10 rounded-2xl border border-emerald-700/50 hover:border-green-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20 animate-slide-in-left">
+            <div className="group bg-slate-800/60 backdrop-blur-md p-10 rounded-2xl border border-emerald-500/40 hover:border-emerald-400 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/30 animate-slide-in-left">
               <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300 animate-float">📷</div>
-              <h4 className="text-2xl font-semibold text-white mb-4 group-hover:text-green-400 transition-colors">Aerial Photography</h4>
-              <p className="text-emerald-200 leading-relaxed">
+              <h4 className="text-2xl font-semibold text-white mb-4 group-hover:text-emerald-400 transition-colors">Aerial Photography</h4>
+              <p className="text-gray-200 leading-relaxed">
                 Stunning high-resolution aerial photographs that capture landscapes, properties, and events from unique perspectives.
               </p>
             </div>
-            <div className="group bg-emerald-950/50 backdrop-blur-md p-10 rounded-2xl border border-emerald-700/50 hover:border-green-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20 animate-scale-in">
+            <div className="group bg-slate-800/60 backdrop-blur-md p-10 rounded-2xl border border-emerald-500/40 hover:border-emerald-400 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/30 animate-scale-in">
               <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300 animate-float">🎥</div>
-              <h4 className="text-2xl font-semibold text-white mb-4 group-hover:text-green-400 transition-colors">Cinematic Videos</h4>
-              <p className="text-emerald-200 leading-relaxed">
+              <h4 className="text-2xl font-semibold text-white mb-4 group-hover:text-emerald-400 transition-colors">Cinematic Videos</h4>
+              <p className="text-gray-200 leading-relaxed">
                 Professional aerial videography with cinematic quality for commercials, real estate, and documentary projects.
               </p>
             </div>
-            <div className="group bg-emerald-950/50 backdrop-blur-md p-10 rounded-2xl border border-emerald-700/50 hover:border-green-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20 animate-slide-in-right">
+            <div className="group bg-slate-800/60 backdrop-blur-md p-10 rounded-2xl border border-emerald-500/40 hover:border-emerald-400 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/30 animate-slide-in-right">
               <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300 animate-float">🌄</div>
-              <h4 className="text-2xl font-semibold text-white mb-4 group-hover:text-green-400 transition-colors">Nature & Landscapes</h4>
-              <p className="text-emerald-200 leading-relaxed">
+              <h4 className="text-2xl font-semibold text-white mb-4 group-hover:text-emerald-400 transition-colors">Nature & Landscapes</h4>
+              <p className="text-gray-200 leading-relaxed">
                 Capturing the natural beauty of forests, mountains, coastlines, and wilderness areas with artistic precision.
               </p>
             </div>
@@ -109,13 +118,13 @@ export default function Home() {
       {/* Gallery Section - Focus on Videos and Photos */}
       <section id="gallery" className="py-24 px-6 relative overflow-hidden">
         {/* Background decoration */}
-        <div className="absolute inset-0 bg-gradient-to-b from-emerald-950 via-green-900 to-emerald-950 opacity-50"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-emerald-900 to-slate-900 opacity-70"></div>
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16 animate-fade-in">
             <h3 className="text-5xl font-bold text-white mb-6 animate-scale-in">Featured Gallery</h3>
-            <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-500 mx-auto mb-6 animate-scale-in-delay"></div>
-            <p className="text-emerald-100 text-xl max-w-2xl mx-auto animate-scale-in-delay-2">
+            <div className="w-24 h-1 bg-gradient-to-r from-emerald-400 to-green-500 mx-auto mb-6 animate-scale-in-delay"></div>
+            <p className="text-white text-xl max-w-2xl mx-auto animate-scale-in-delay-2">
               Explore our collection of breathtaking aerial imagery and videography
             </p>
           </div>
@@ -243,22 +252,22 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-24 px-6 bg-emerald-900/30 backdrop-blur-sm">
+      <section id="pricing" className="py-24 px-6 bg-slate-900/60 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
             <h3 className="text-5xl font-bold text-white mb-6 animate-scale-in">Pricing Packages</h3>
-            <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-500 mx-auto mb-6 animate-scale-in-delay"></div>
-            <p className="text-emerald-100 text-xl max-w-2xl mx-auto animate-scale-in-delay-2">
+            <div className="w-24 h-1 bg-gradient-to-r from-emerald-400 to-green-500 mx-auto mb-6 animate-scale-in-delay"></div>
+            <p className="text-white text-xl max-w-2xl mx-auto animate-scale-in-delay-2">
               Flexible packages tailored to your project needs. All include professional editing and color grading.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Starter Package */}
-            <div className="group bg-emerald-950/50 backdrop-blur-md rounded-2xl p-10 border border-emerald-700/50 hover:border-green-500/50 transition-all duration-500 flex flex-col hover:transform hover:scale-105 animate-slide-in-left">
+            <div className="group bg-slate-800/70 backdrop-blur-md rounded-2xl p-10 border border-emerald-500/40 hover:border-emerald-400 transition-all duration-500 flex flex-col hover:transform hover:scale-105 animate-slide-in-left">
               <h4 className="text-2xl font-bold text-white mb-2">Essentials</h4>
               <div className="mb-6">
                 <span className="text-5xl font-bold text-white">$599</span>
-                <span className="text-emerald-300 ml-2">/ project</span>
+                <span className="text-gray-300 ml-2">/ project</span>
               </div>
               <ul className="space-y-4 mb-8 flex-grow">
                 <li className="flex items-start gap-3 text-emerald-200">
@@ -298,9 +307,9 @@ export default function Home() {
             </div>
 
             {/* Professional Package - Featured */}
-            <div className="relative bg-gradient-to-br from-green-700 via-emerald-700 to-green-800 rounded-2xl p-10 border-2 border-green-400 flex flex-col transform md:scale-110 shadow-2xl shadow-green-500/50 z-10 animate-scale-in">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-green-400 to-emerald-400 text-emerald-950 px-6 py-2 rounded-full text-sm font-bold shadow-lg animate-pulse">
-                MOST POPULAR
+            <div className="relative bg-gradient-to-br from-emerald-600 via-green-600 to-emerald-700 rounded-2xl p-10 border-2 border-emerald-400 flex flex-col transform md:scale-110 shadow-2xl shadow-emerald-500/50 z-10 animate-scale-in">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 text-slate-900 px-8 py-2 rounded-full text-sm font-bold border-2 border-yellow-300 z-20 animate-badge-glow">
+                ⭐ MOST POPULAR ⭐
               </div>
               <h4 className="text-2xl font-bold text-white mb-2">Professional</h4>
               <div className="mb-6">
