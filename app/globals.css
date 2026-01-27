@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f0f4f0;
+  --foreground: #1a3a1a;
+  --nature-primary: #2d5a2d;
+  --nature-secondary: #4a7c4a;
+  --nature-accent: #6ba86b;
+  --nature-light: #a8d5a8;
+  --earth-brown: #5d4e37;
 }
 
 @theme inline {
@@ -14,8 +19,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0f1a0f;
+    --foreground: #e8f4e8;
   }
 }
 
@@ -67,6 +72,48 @@ body {
   }
 }
 
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
 .animate-fade-in {
   animation: fadeIn 1s ease-in-out;
 }
@@ -92,6 +139,30 @@ body {
   animation: float 3s ease-in-out infinite;
 }
 
+.animate-scale-in {
+  animation: scaleIn 0.6s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-scale-in-delay {
+  animation: scaleIn 0.6s ease-out 0.3s both;
+}
+
+.animate-scale-in-delay-2 {
+  animation: scaleIn 0.6s ease-out 0.6s both;
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
@@ -103,14 +174,14 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1c1917;
+  background: #1a2e1a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #78350f;
+  background: #2d5a2d;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #92400e;
+  background: #4a7c4a;
 }
