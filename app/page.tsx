@@ -22,7 +22,7 @@ export default function Home() {
       {/* Hero Section with Iframe Background */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Iframe Background - Improved aspect ratio and sizing */}
-        <div className="absolute inset-0 z-0 w-full h-full bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-950">
+        <div className="absolute inset-0 z-0 w-full h-full bg-slate-950">
           <div className="absolute inset-0 w-full h-full" style={{ 
             transform: 'scale(1.5)',
             transformOrigin: 'center center'
@@ -46,8 +46,8 @@ export default function Home() {
               className="w-full h-full"
             />
           </div>
-          {/* Enhanced overlay gradient with better contrast */}
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/70 via-emerald-950/50 to-slate-900/80"></div>
+          {/* Minimal overlay for text readability only */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60"></div>
         </div>
 
         {/* Hero Content - Enhanced text with better contrast */}
@@ -84,34 +84,34 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-24 px-6 bg-emerald-900/30 backdrop-blur-sm">
+      <section id="services" className="py-24 px-6 bg-slate-900/50 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
             <h3 className="text-5xl font-bold text-white mb-6 animate-scale-in">Our Services</h3>
-            <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-500 mx-auto mb-6 animate-scale-in-delay"></div>
-            <p className="text-emerald-100 text-xl max-w-2xl mx-auto animate-scale-in-delay-2">
+            <div className="w-24 h-1 bg-gradient-to-r from-emerald-400 to-green-500 mx-auto mb-6 animate-scale-in-delay"></div>
+            <p className="text-white text-xl max-w-2xl mx-auto animate-scale-in-delay-2">
               Specializing in aerial photography and videography for diverse industries
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="group bg-emerald-950/50 backdrop-blur-md p-10 rounded-2xl border border-emerald-700/50 hover:border-green-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20 animate-slide-in-left">
+            <div className="group bg-slate-800/60 backdrop-blur-md p-10 rounded-2xl border border-emerald-500/40 hover:border-emerald-400 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/30 animate-slide-in-left">
               <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300 animate-float">📷</div>
-              <h4 className="text-2xl font-semibold text-white mb-4 group-hover:text-green-400 transition-colors">Aerial Photography</h4>
-              <p className="text-emerald-200 leading-relaxed">
+              <h4 className="text-2xl font-semibold text-white mb-4 group-hover:text-emerald-400 transition-colors">Aerial Photography</h4>
+              <p className="text-gray-200 leading-relaxed">
                 Stunning high-resolution aerial photographs that capture landscapes, properties, and events from unique perspectives.
               </p>
             </div>
-            <div className="group bg-emerald-950/50 backdrop-blur-md p-10 rounded-2xl border border-emerald-700/50 hover:border-green-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20 animate-scale-in">
+            <div className="group bg-slate-800/60 backdrop-blur-md p-10 rounded-2xl border border-emerald-500/40 hover:border-emerald-400 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/30 animate-scale-in">
               <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300 animate-float">🎥</div>
-              <h4 className="text-2xl font-semibold text-white mb-4 group-hover:text-green-400 transition-colors">Cinematic Videos</h4>
-              <p className="text-emerald-200 leading-relaxed">
+              <h4 className="text-2xl font-semibold text-white mb-4 group-hover:text-emerald-400 transition-colors">Cinematic Videos</h4>
+              <p className="text-gray-200 leading-relaxed">
                 Professional aerial videography with cinematic quality for commercials, real estate, and documentary projects.
               </p>
             </div>
-            <div className="group bg-emerald-950/50 backdrop-blur-md p-10 rounded-2xl border border-emerald-700/50 hover:border-green-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20 animate-slide-in-right">
+            <div className="group bg-slate-800/60 backdrop-blur-md p-10 rounded-2xl border border-emerald-500/40 hover:border-emerald-400 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/30 animate-slide-in-right">
               <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300 animate-float">🌄</div>
-              <h4 className="text-2xl font-semibold text-white mb-4 group-hover:text-green-400 transition-colors">Nature & Landscapes</h4>
-              <p className="text-emerald-200 leading-relaxed">
+              <h4 className="text-2xl font-semibold text-white mb-4 group-hover:text-emerald-400 transition-colors">Nature & Landscapes</h4>
+              <p className="text-gray-200 leading-relaxed">
                 Capturing the natural beauty of forests, mountains, coastlines, and wilderness areas with artistic precision.
               </p>
             </div>
@@ -122,13 +122,13 @@ export default function Home() {
       {/* Gallery Section - Focus on Videos and Photos */}
       <section id="gallery" className="py-24 px-6 relative overflow-hidden">
         {/* Background decoration */}
-        <div className="absolute inset-0 bg-gradient-to-b from-emerald-950 via-green-900 to-emerald-950 opacity-50"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-emerald-900 to-slate-900 opacity-70"></div>
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16 animate-fade-in">
             <h3 className="text-5xl font-bold text-white mb-6 animate-scale-in">Featured Gallery</h3>
-            <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-500 mx-auto mb-6 animate-scale-in-delay"></div>
-            <p className="text-emerald-100 text-xl max-w-2xl mx-auto animate-scale-in-delay-2">
+            <div className="w-24 h-1 bg-gradient-to-r from-emerald-400 to-green-500 mx-auto mb-6 animate-scale-in-delay"></div>
+            <p className="text-white text-xl max-w-2xl mx-auto animate-scale-in-delay-2">
               Explore our collection of breathtaking aerial imagery and videography
             </p>
           </div>
@@ -256,22 +256,22 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-24 px-6 bg-emerald-900/30 backdrop-blur-sm">
+      <section id="pricing" className="py-24 px-6 bg-slate-900/60 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
             <h3 className="text-5xl font-bold text-white mb-6 animate-scale-in">Pricing Packages</h3>
-            <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-500 mx-auto mb-6 animate-scale-in-delay"></div>
-            <p className="text-emerald-100 text-xl max-w-2xl mx-auto animate-scale-in-delay-2">
+            <div className="w-24 h-1 bg-gradient-to-r from-emerald-400 to-green-500 mx-auto mb-6 animate-scale-in-delay"></div>
+            <p className="text-white text-xl max-w-2xl mx-auto animate-scale-in-delay-2">
               Flexible packages tailored to your project needs. All include professional editing and color grading.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Starter Package */}
-            <div className="group bg-emerald-950/50 backdrop-blur-md rounded-2xl p-10 border border-emerald-700/50 hover:border-green-500/50 transition-all duration-500 flex flex-col hover:transform hover:scale-105 animate-slide-in-left">
+            <div className="group bg-slate-800/70 backdrop-blur-md rounded-2xl p-10 border border-emerald-500/40 hover:border-emerald-400 transition-all duration-500 flex flex-col hover:transform hover:scale-105 animate-slide-in-left">
               <h4 className="text-2xl font-bold text-white mb-2">Essentials</h4>
               <div className="mb-6">
                 <span className="text-5xl font-bold text-white">$599</span>
-                <span className="text-emerald-300 ml-2">/ project</span>
+                <span className="text-gray-300 ml-2">/ project</span>
               </div>
               <ul className="space-y-4 mb-8 flex-grow">
                 <li className="flex items-start gap-3 text-emerald-200">
@@ -312,7 +312,7 @@ export default function Home() {
 
             {/* Professional Package - Featured */}
             <div className="relative bg-gradient-to-br from-emerald-600 via-green-600 to-emerald-700 rounded-2xl p-10 border-2 border-emerald-400 flex flex-col transform md:scale-110 shadow-2xl shadow-emerald-500/50 z-10 animate-scale-in">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 text-slate-900 px-8 py-2 rounded-full text-sm font-bold shadow-xl animate-pulse border-2 border-yellow-300">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 text-slate-900 px-8 py-2 rounded-full text-sm font-bold border-2 border-yellow-300 z-20 animate-badge-glow">
                 ⭐ MOST POPULAR ⭐
               </div>
               <h4 className="text-2xl font-bold text-white mb-2">Professional</h4>
