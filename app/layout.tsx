@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
+import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+
+const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-inter" });
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], display: "swap", variable: "--font-space-grotesk" });
 
 export const metadata: Metadata = {
   title: "Apex Aerial Imaging | Professional Aerial Photography & Videography",
@@ -15,20 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
-        {/* Start of Zeacon Code */}
-        <Script
-          type="text/javascript"
-          async
-          id="zeacon-sdk"
-          src="https://zeacon.com/sdk/correlator.js?api-key=22b37205-4d63-4270-9992-9557d2dbdaaa"
-        />
-        <Script
-          id="zeacon-sdk-correlation-manager"
-          type="text/javascript"
-          src="https://zeacon.com/sdk/correlation-manager/bundle.js"
-        />
-        {/* End of Zeacon Code */}
+      <body className={`antialiased bg-bg text-primary ${inter.variable} ${spaceGrotesk.variable}`}>
         {children}
         <Analytics />
       </body>
