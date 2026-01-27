@@ -258,7 +258,7 @@ export default function Home() {
                         muted
                         loop
                         playsInline
-                        className="h-full w-full object-cover opacity-30"
+                        className="h-full w-full object-cover opacity-35"
                       >
                         <source src="/raja-ampat-islands-22.mp4" type="video/mp4" />
                       </video>
