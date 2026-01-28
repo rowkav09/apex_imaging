@@ -195,3 +195,16 @@ html {
     transform: translateX(6px);
   }
 }
+
+@keyframes drift {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: drift 30s linear infinite;
+}
