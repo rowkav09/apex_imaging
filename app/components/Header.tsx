@@ -32,10 +32,10 @@ export default function Header() {
       >
         <nav className="w-full h-full flex">
           {[
-            { name: 'Home', href: '/', color: 'bg-[#3a4a52]' },
-            { name: 'Services', href: '/#drone-services', color: 'bg-[#d4af37]' },
-            { name: 'Portfolio', href: '/drones', color: 'bg-[#cd7f32]' },
-            { name: 'Contact', href: '/#contact', color: 'bg-[#8b7355]' },
+            { name: 'Home', href: '/', color: 'bg-[#0f1a14]' },
+            { name: 'Services', href: '/#drone-services', color: 'bg-[#172a1f]' },
+            { name: 'Portfolio', href: '/drones', color: 'bg-[#1f3628]' },
+            { name: 'Contact', href: '/#contact', color: 'bg-[#274533]' },
           ].map((item, idx) => (
             <div
               key={item.name}
@@ -49,18 +49,18 @@ export default function Header() {
               <Link
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-white text-2xl md:text-3xl font-light hover:text-emerald-400 transition-colors"
+                className="text-white text-2xl md:text-3xl font-light hover:text-emerald-300 transition-colors"
               >
                 {item.name}
               </Link>
             </div>
           ))}
         </nav>
-        
+
         {/* Menu Close Button - Always accessible */}
         <button
           onClick={() => setMenuOpen(false)}
-          className="absolute top-8 right-8 z-[102] w-10 h-10 flex items-center justify-center hover:opacity-70 transition-opacity"
+          className="absolute top-40 right-8 z-[102] w-10 h-10 flex items-center justify-center hover:opacity-70 transition-opacity"
           aria-label="Close menu"
         >
           <div className="relative w-6 h-6">
@@ -73,7 +73,7 @@ export default function Header() {
       {/* Sticky Navigation Header */}
       <nav
         className={`fixed top-0 left-0 w-full z-40 bg-black/80 border-b border-white/10 transition-all duration-300 ease-out ${
-          showNav ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-6 pointer-events-none"
+          showNav ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-6 pointer-events-none'
         }`}
         aria-hidden={!showNav}
       >
@@ -84,7 +84,7 @@ export default function Header() {
             </div>
             <span className="font-display text-lg tracking-tight text-white">APEX</span>
           </Link>
-          
+
           <div className="flex items-center gap-4">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
