@@ -155,37 +155,34 @@ export default function Home() {
   }, []);
   const projects = [
               {
-                title: "The Stone House",
-                tag: "Residential",
-                location: "Oslo, Norway",
-                image: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop",
-                altitude: "120m",
-                sensor: "Hasselblad",
-                description:
-                  "Capturing the interplay between raw concrete and Nordic coastline. Heavy-lift drones in high winds, cinematic RAW pipeline.",
-                tone: "light",
+                title: "Highland Trail",
+                tag: "Landscape",
+                location: "UK",
+                video: "/non_paid/mountain_walk.MP4",
               },
               {
-                title: "Apex Tower",
-                tag: "Commercial",
-                location: "London, UK",
-                image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=2670&auto=format&fit=crop",
-                altitude: "310m",
-                sensor: "Red V-Raptor",
-                description:
-                  "A vertical journey through the glass facade. Precision FPV flight paths navigating atrium structures with cinematic lighting.",
-                tone: "dark",
+                title: "Forest Path",
+                tag: "Lifestyle",
+                location: "UK",
+                video: "/non_paid/walk.MP4",
               },
               {
-                title: "Oasis Retreat",
-                tag: "Hospitality",
-                location: "Marrakech, Morocco",
-                image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2670&auto=format&fit=crop",
-                altitude: "45m",
-                sensor: "Zenmuse X7",
-                description:
-                  "Geometry of shadows at sunset. Thermal imaging paired with 6K cinematography for a full sensory audit of the resort.",
-                tone: "light",
+                title: "Still Waters",
+                tag: "Waterscape",
+                location: "UK",
+                video: "/non_paid/water.MP4",
+              },
+              {
+                title: "Yacht Glide",
+                tag: "Marine",
+                location: "UK",
+                video: "/non_paid/yacht.mp4",
+              },
+              {
+                title: "Yacht Rainbow Run",
+                tag: "Marine",
+                location: "UK",
+                video: "/non_paid/yacht_rainbow.MP4",
               },
             ];
 
@@ -211,10 +208,10 @@ export default function Home() {
             ];
 
             const gallery = [
-              "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg",
-              "https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=1600&auto=format&fit=crop",
-              "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1600&auto=format&fit=crop",
-              "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop",
+              "/non_paid/mountain_walk.MP4",
+              "/non_paid/walk.MP4",
+              "/non_paid/water.MP4",
+              "/non_paid/yacht.mp4",
             ];
 
   return (
@@ -232,7 +229,7 @@ export default function Home() {
                         playsInline
                         preload="metadata"
                       >
-                        <source src="/fall-forest-autumn.mp4" type="video/mp4" />
+                        <source src="/stock_footage/fall-forest-autumn.mp4" type="video/mp4" />
                       </video>
                     </div>
                   </div>
@@ -245,7 +242,7 @@ export default function Home() {
                     <h1 className="flex flex-col items-center font-display text-[13vw] leading-[0.8] tracking-tight md:text-[8vw] text-glow">
                         <span className="drop-shadow-xl">APEX</span>
                         <span className="relative" style={{ 
-                          backgroundImage: 'linear-gradient(135deg, #d4af37 0%, #cd7f32 35%, #b87333 70%, #8b4513 100%)',
+                          backgroundImage: 'linear-gradient(135deg, #1f8a5b 0%, #2f9b6c 40%, #3a8f62 70%, #2b6b4d 100%)',
                           backgroundClip: 'text',
                           WebkitBackgroundClip: 'text',
                           WebkitTextFillColor: 'transparent',
@@ -278,22 +275,34 @@ export default function Home() {
                       </div>
                       <div className="lg:col-span-8 space-y-8">
                         <h2 className="font-display text-4xl leading-[1.05] tracking-tight text-primary md:text-5xl lg:text-6xl">
-                          Every property has a story. Every vehicle deserves its moment. We capture
-                          <span className="italic text-secondary"> stunning aerial perspectives </span>
-                          that showcase your assets from angles impossible to achieve on the ground.
+                          We create aerial stories across property, automotive, commercial, tourism, construction, events, and marine.
+                          <span className="italic text-secondary"> Cinematic drone coverage </span>
+                          that makes every project feel intentional and premium.
                         </h2>
                         <div className="grid grid-cols-2 gap-8 md:grid-cols-3">
                           <div className="space-y-2">
-                            <span className="text-sm font-medium text-primary">4K Cinematic</span>
-                            <p className="text-xs text-secondary">Crystal-clear 4K footage perfect for listings and showreels.</p>
-                          </div>
-                          <div className="space-y-2">
                             <span className="text-sm font-medium text-primary">Real Estate</span>
-                            <p className="text-xs text-secondary">Property exteriors, neighborhoods, and surrounding areas.</p>
+                            <p className="text-xs text-secondary">Exteriors, neighborhoods, and luxury listings.</p>
                           </div>
                           <div className="space-y-2">
                             <span className="text-sm font-medium text-primary">Automotive</span>
-                            <p className="text-xs text-secondary">Dynamic car shots with FPV and cinematic tracking.</p>
+                            <p className="text-xs text-secondary">FPV chase, rolling shots, and hero passes.</p>
+                          </div>
+                          <div className="space-y-2">
+                            <span className="text-sm font-medium text-primary">Commercial & Brand</span>
+                            <p className="text-xs text-secondary">Campaign visuals and social-ready promos.</p>
+                          </div>
+                          <div className="space-y-2">
+                            <span className="text-sm font-medium text-primary">Tourism & Hospitality</span>
+                            <p className="text-xs text-secondary">Resorts, venues, and destination highlights.</p>
+                          </div>
+                          <div className="space-y-2">
+                            <span className="text-sm font-medium text-primary">Construction</span>
+                            <p className="text-xs text-secondary">Progress capture, site context, and timelines.</p>
+                          </div>
+                          <div className="space-y-2">
+                            <span className="text-sm font-medium text-primary">Events & Marine</span>
+                            <p className="text-xs text-secondary">Live coverage, yachts, and coastal visuals.</p>
                           </div>
                         </div>
                       </div>
@@ -306,224 +315,251 @@ export default function Home() {
                     
                     <div className="flex w-max animate-marquee items-center">
                       <div className="flex gap-20 px-10 text-neutral-500 font-medium tracking-widest text-sm uppercase">
-                        <span>DJI</span>
-                        <span>RED Digital</span>
-                        <span>Arri</span>
-                        <span>Freefly</span>
-                        <span>Inspire</span>
-                        <span>Mavic</span>
-                        <span>DJI</span>
-                        <span>RED Digital</span>
-                        <span>Arri</span>
-                        <span>Freefly</span>
-                        <span>Inspire</span>
-                        <span>Mavic</span>
+                        <span>Real Estate</span>
+                        <span>Automotive</span>
+                        <span>Commercial</span>
+                        <span>Tourism</span>
+                        <span>Construction</span>
+                        <span>Events</span>
+                        <span>Marine</span>
+                        <span>FPV</span>
+                        <span>Real Estate</span>
+                        <span>Automotive</span>
+                        <span>Commercial</span>
+                        <span>Tourism</span>
                       </div>
                       <div className="flex gap-20 px-10 text-neutral-500 font-medium tracking-widest text-sm uppercase">
-                        <span>DJI</span>
-                        <span>RED Digital</span>
-                        <span>Arri</span>
-                        <span>Freefly</span>
-                        <span>Inspire</span>
-                        <span>Mavic</span>
-                        <span>DJI</span>
-                        <span>RED Digital</span>
-                        <span>Arri</span>
-                        <span>Freefly</span>
-                        <span>Inspire</span>
-                        <span>Mavic</span>
+                        <span>Construction</span>
+                        <span>Events</span>
+                        <span>Marine</span>
+                        <span>FPV</span>
+                        <span>Real Estate</span>
+                        <span>Automotive</span>
+                        <span>Commercial</span>
+                        <span>Tourism</span>
+                        <span>Construction</span>
+                        <span>Events</span>
+                        <span>Marine</span>
+                        <span>FPV</span>
                       </div>
                     </div>
                   </section>
 
                   <section id="drone-services" className="relative px-6 py-24 md:px-12 lg:px-24 bg-bg">
                     <div className="mb-14 text-center max-w-4xl mx-auto">
-                      <span className="font-mono text-xs uppercase tracking-[0.35em] text-secondary">Packages</span>
-                      <h2 className="mt-4 font-display text-4xl md:text-5xl lg:text-6xl tracking-tight text-primary">Our Drone Services</h2>
-                      <p className="mt-6 text-base text-secondary leading-relaxed">Choose the perfect drone package for your project needs. From fast-paced action shots to luxury cinematic aerials.</p>
+                      <span className="font-mono text-xs uppercase tracking-[0.35em] text-secondary">Drone & Hourly Pricing</span>
+                      <h2 className="mt-4 font-display text-4xl md:text-5xl lg:text-6xl tracking-tight text-primary">Three Drone Types</h2>
+                      <p className="mt-6 text-base text-secondary leading-relaxed">Clear hourly pricing for the right platform.</p>
                     </div>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto justify-items-center">
-                      {/* FPV Drone Package */}
-                      <div className="relative hover:bg-white/[0.04] transition-all duration-300 group rounded-2xl pt-6 pr-6 pb-6 pl-6 w-full" style={{ maxWidth: "22rem", backgroundColor: "hsla(240, 15%, 9%, 1)", backgroundImage: "radial-gradient(at 88% 40%, hsla(240, 15%, 9%, 1) 0px, transparent 85%), radial-gradient(at 49% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%), radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%), radial-gradient(at 0% 64%, hsla(263, 93%, 56%, 1) 0px, transparent 85%), radial-gradient(at 41% 94%, hsla(284, 100%, 84%, 1) 0px, transparent 85%), radial-gradient(at 100% 99%, hsla(306, 100%, 57%, 1) 0px, transparent 85%)", boxShadow: "0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset" }}>
+                      {/* Mini Drone */}
+                      <div className="relative hover:bg-white/[0.04] transition-all duration-300 group rounded-2xl pt-6 pr-6 pb-6 pl-6 w-full" style={{ maxWidth: "22rem", backgroundColor: "hsla(155, 20%, 8%, 1)", backgroundImage: "radial-gradient(at 88% 40%, hsla(155, 20%, 8%, 1) 0px, transparent 85%), radial-gradient(at 49% 30%, hsla(155, 20%, 8%, 1) 0px, transparent 85%), radial-gradient(at 14% 26%, hsla(155, 20%, 8%, 1) 0px, transparent 85%), radial-gradient(at 0% 64%, hsla(150, 65%, 40%, 1) 0px, transparent 85%), radial-gradient(at 41% 94%, hsla(150, 55%, 55%, 1) 0px, transparent 85%), radial-gradient(at 100% 99%, hsla(145, 60%, 35%, 1) 0px, transparent 85%)", boxShadow: "0px -16px 24px 0px rgba(255, 255, 255, 0.18) inset" }}>
                         <div style={{ overflow: "hidden", pointerEvents: "none", position: "absolute", zIndex: -10, top: "50%", left: "50%", transform: "translate(-50%, -50%)", width: "calc(100% + 2px)", height: "calc(100% + 2px)", backgroundImage: "linear-gradient(0deg, hsl(0, 0%, 100%) -50%, hsl(0, 0%, 40%) 100%)", borderRadius: "1rem" }}>
-                          <div style={{ content: "", pointerEvents: "none", position: "fixed", zIndex: 200, top: "50%", left: "50%", transform: "translate(-50%, -50%) rotate(0deg)", transformOrigin: "left", width: "200%", height: "10rem", backgroundImage: "linear-gradient(0deg, hsla(0, 0%, 100%, 0) 0%, hsl(277, 95%, 60%) 40%, hsl(277, 95%, 60%) 60%, hsla(0, 0%, 40%, 0) 100%)", animation: "rotate 8s linear infinite" }}></div>
+                          <div style={{ content: "", pointerEvents: "none", position: "fixed", zIndex: 200, top: "50%", left: "50%", transform: "translate(-50%, -50%) rotate(0deg)", transformOrigin: "left", width: "200%", height: "10rem", backgroundImage: "linear-gradient(0deg, hsla(0, 0%, 100%, 0) 0%, hsl(150, 55%, 45%) 40%, hsl(150, 55%, 45%) 60%, hsla(0, 0%, 40%, 0) 100%)", animation: "rotate 8s linear infinite" }}></div>
                         </div>
                         
                         <style>{`@keyframes rotate { to { transform: translate(-50%, -50%) rotate(360deg); } }`}</style>
 
-                        <div className="flex items-center justify-between mb-6">
-                          <div className="flex items-center gap-3">
-                            <div className="h-10 w-10 rounded-xl border border-white/20 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-blue-400"><path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"></path></svg>
-                            </div>
-                            <div>
-                              <h3 className="text-xl font-medium tracking-tight text-white">FPV Drone</h3>
-                              <p className="text-xs text-neutral-500">Fast & dynamic</p>
-                            </div>
-                          </div>
-                          <div className="plan-radio h-5 w-5 rounded-full border-2 border-white/30"></div>
+                        <div className="mb-6">
+                          <h3 className="text-xl font-medium tracking-tight text-white">Mini</h3>
+                          <p className="text-xs text-neutral-500">Indoor / tight spaces</p>
                         </div>
 
                         <div className="mb-6">
-                          <p className="text-sm text-neutral-300 mb-3">Fast, dynamic, immersive footage</p>
-                          <p className="text-xs text-neutral-500">Cars • Bikes • Action • Indoor fly-throughs</p>
+                          <p className="text-sm text-neutral-300 mb-3">Safe, compact footage for interiors</p>
+                          <p className="text-xs text-neutral-500">Homes • Venues • Tight fly-throughs</p>
                         </div>
 
                         <div className="mb-6">
                           <div className="flex items-baseline gap-2">
-                            <span className="text-2xl font-semibold tracking-tight text-white">£POA</span>
+                            <span className="text-2xl font-semibold tracking-tight text-white">£100/hr</span>
                           </div>
-                          <p className="text-xs text-neutral-500 mt-1">Per session</p>
+                          <p className="text-xs text-neutral-500 mt-1">Per hour</p>
                         </div>
 
-                        <ul className="space-y-3 text-sm text-neutral-300">
-                          <li className="flex items-start gap-3">
-                            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "1rem", height: "1rem", backgroundColor: "hsl(266, 92%, 58%)", borderRadius: "50%" }}>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="hsl(240, 15%, 9%)" stroke="hsl(240, 15%, 9%)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
-                            </div>
-                            4K/60fps capture
-                          </li>
-                          <li className="flex items-start gap-3">
-                            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "1rem", height: "1rem", backgroundColor: "hsl(266, 92%, 58%)", borderRadius: "50%" }}>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="hsl(240, 15%, 9%)" stroke="hsl(240, 15%, 9%)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
-                            </div>
-                            Sub-second response time
-                          </li>
-                          <li className="flex items-start gap-3">
-                            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "1rem", height: "1rem", backgroundColor: "hsl(266, 92%, 58%)", borderRadius: "50%" }}>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="hsl(240, 15%, 9%)" stroke="hsl(240, 15%, 9%)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
-                            </div>
-                            Indoor & outdoor capable
-                          </li>
+                        <ul className="space-y-3 text-sm text-neutral-300 list-disc pl-5">
+                          <li>Indoor-safe platform</li>
+                          <li>Stable close-proximity movement</li>
+                          <li>Ideal for interior reveals</li>
                         </ul>
                       </div>
 
-                      {/* Cinematic Drone Standard */}
-                      <div className="relative hover:bg-white/[0.04] transition-all duration-300 group rounded-2xl pt-6 pr-6 pb-6 pl-6 w-full" style={{ maxWidth: "22rem", backgroundColor: "hsla(240, 15%, 9%, 1)", backgroundImage: "radial-gradient(at 88% 40%, hsla(240, 15%, 9%, 1) 0px, transparent 85%), radial-gradient(at 49% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%), radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%), radial-gradient(at 0% 64%, hsla(263, 93%, 56%, 1) 0px, transparent 85%), radial-gradient(at 41% 94%, hsla(284, 100%, 84%, 1) 0px, transparent 85%), radial-gradient(at 100% 99%, hsla(306, 100%, 57%, 1) 0px, transparent 85%)", boxShadow: "0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset" }}>
+                      {/* Mavic Drone */}
+                      <div className="relative hover:bg-white/[0.04] transition-all duration-300 group rounded-2xl pt-6 pr-6 pb-6 pl-6 w-full" style={{ maxWidth: "22rem", backgroundColor: "hsla(155, 20%, 8%, 1)", backgroundImage: "radial-gradient(at 88% 40%, hsla(155, 20%, 8%, 1) 0px, transparent 85%), radial-gradient(at 49% 30%, hsla(155, 20%, 8%, 1) 0px, transparent 85%), radial-gradient(at 14% 26%, hsla(155, 20%, 8%, 1) 0px, transparent 85%), radial-gradient(at 0% 64%, hsla(150, 65%, 40%, 1) 0px, transparent 85%), radial-gradient(at 41% 94%, hsla(150, 55%, 55%, 1) 0px, transparent 85%), radial-gradient(at 100% 99%, hsla(145, 60%, 35%, 1) 0px, transparent 85%)", boxShadow: "0px -16px 24px 0px rgba(255, 255, 255, 0.18) inset" }}>
                         <div style={{ overflow: "hidden", pointerEvents: "none", position: "absolute", zIndex: -10, top: "50%", left: "50%", transform: "translate(-50%, -50%)", width: "calc(100% + 2px)", height: "calc(100% + 2px)", backgroundImage: "linear-gradient(0deg, hsl(0, 0%, 100%) -50%, hsl(0, 0%, 40%) 100%)", borderRadius: "1rem" }}>
-                          <div style={{ content: "", pointerEvents: "none", position: "fixed", zIndex: 200, top: "50%", left: "50%", transform: "translate(-50%, -50%) rotate(0deg)", transformOrigin: "left", width: "200%", height: "10rem", backgroundImage: "linear-gradient(0deg, hsla(0, 0%, 100%, 0) 0%, hsl(277, 95%, 60%) 40%, hsl(277, 95%, 60%) 60%, hsla(0, 0%, 40%, 0) 100%)", animation: "rotate 8s linear infinite" }}></div>
-                        </div>
-
-                        <div className="flex items-center justify-between mb-6">
-                          <div className="flex items-center gap-3">
-                            <div className="h-10 w-10 rounded-xl border border-white/20 bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-purple-400"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
-                            </div>
-                            <div>
-                              <h3 className="text-xl font-medium tracking-tight text-white">Cinematic Standard</h3>
-                              <p className="text-xs text-neutral-500">High quality</p>
-                            </div>
-                          </div>
-                          <div className="plan-radio h-5 w-5 rounded-full border-2 border-white/30"></div>
+                          <div style={{ content: "", pointerEvents: "none", position: "fixed", zIndex: 200, top: "50%", left: "50%", transform: "translate(-50%, -50%) rotate(0deg)", transformOrigin: "left", width: "200%", height: "10rem", backgroundImage: "linear-gradient(0deg, hsla(0, 0%, 100%, 0) 0%, hsl(150, 55%, 45%) 40%, hsl(150, 55%, 45%) 60%, hsla(0, 0%, 40%, 0) 100%)", animation: "rotate 8s linear infinite" }}></div>
                         </div>
 
                         <div className="mb-6">
-                          <p className="text-sm text-neutral-300 mb-3">Smooth, high-quality aerial shots</p>
-                          <p className="text-xs text-neutral-500">Property • Businesses • Promo</p>
+                          <h3 className="text-xl font-medium tracking-tight text-white">Mavic</h3>
+                          <p className="text-xs text-neutral-500">Cinematic / general aerial</p>
+                        </div>
+
+                        <div className="mb-6">
+                          <p className="text-sm text-neutral-300 mb-3">Clean, cinematic establishing shots</p>
+                          <p className="text-xs text-neutral-500">Property • Tourism • Commercial</p>
                         </div>
 
                         <div className="mb-6">
                           <div className="flex items-baseline gap-2">
-                            <span className="text-2xl font-semibold tracking-tight text-white">£POA</span>
+                            <span className="text-2xl font-semibold tracking-tight text-white">£150/hr</span>
                           </div>
-                          <p className="text-xs text-neutral-500 mt-1">Per session</p>
+                          <p className="text-xs text-neutral-500 mt-1">Per hour</p>
                         </div>
 
-                        <ul className="space-y-3 text-sm text-neutral-300">
-                          <li className="flex items-start gap-3">
-                            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "1rem", height: "1rem", backgroundColor: "hsl(266, 92%, 58%)", borderRadius: "50%" }}>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="hsl(240, 15%, 9%)" stroke="hsl(240, 15%, 9%)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
-                            </div>
-                            8K RAW recording
-                          </li>
-                          <li className="flex items-start gap-3">
-                            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "1rem", height: "1rem", backgroundColor: "hsl(266, 92%, 58%)", borderRadius: "50%" }}>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="hsl(240, 15%, 9%)" stroke="hsl(240, 15%, 9%)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
-                            </div>
-                            Gimbal stabilization
-                          </li>
-                          <li className="flex items-start gap-3">
-                            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "1rem", height: "1rem", backgroundColor: "hsl(266, 92%, 58%)", borderRadius: "50%" }}>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="hsl(240, 15%, 9%)" stroke="hsl(240, 15%, 9%)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
-                            </div>
-                            Professional color grading
-                          </li>
+                        <ul className="space-y-3 text-sm text-neutral-300 list-disc pl-5">
+                          <li>4K capture depending on camera</li>
+                          <li>3-axis gimbal stabilization</li>
+                          <li>Log profiles and grade-ready files</li>
                         </ul>
                       </div>
 
-                      {/* Cinematic Drone High-End */}
-                      <div className="relative hover:bg-white/[0.04] transition-all duration-300 group rounded-2xl pt-6 pr-6 pb-6 pl-6 w-full" style={{ maxWidth: "22rem", backgroundColor: "hsla(240, 15%, 9%, 1)", backgroundImage: "radial-gradient(at 88% 40%, hsla(240, 15%, 9%, 1) 0px, transparent 85%), radial-gradient(at 49% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%), radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%), radial-gradient(at 0% 64%, hsla(263, 93%, 56%, 1) 0px, transparent 85%), radial-gradient(at 41% 94%, hsla(284, 100%, 84%, 1) 0px, transparent 85%), radial-gradient(at 100% 99%, hsla(306, 100%, 57%, 1) 0px, transparent 85%)", boxShadow: "0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset" }}>
+                      {/* FPV Drone */}
+                      <div className="relative hover:bg-white/[0.04] transition-all duration-300 group rounded-2xl pt-6 pr-6 pb-6 pl-6 w-full" style={{ maxWidth: "22rem", backgroundColor: "hsla(155, 20%, 8%, 1)", backgroundImage: "radial-gradient(at 88% 40%, hsla(155, 20%, 8%, 1) 0px, transparent 85%), radial-gradient(at 49% 30%, hsla(155, 20%, 8%, 1) 0px, transparent 85%), radial-gradient(at 14% 26%, hsla(155, 20%, 8%, 1) 0px, transparent 85%), radial-gradient(at 0% 64%, hsla(150, 65%, 40%, 1) 0px, transparent 85%), radial-gradient(at 41% 94%, hsla(150, 55%, 55%, 1) 0px, transparent 85%), radial-gradient(at 100% 99%, hsla(145, 60%, 35%, 1) 0px, transparent 85%)", boxShadow: "0px -16px 24px 0px rgba(255, 255, 255, 0.18) inset" }}>
                         <div style={{ overflow: "hidden", pointerEvents: "none", position: "absolute", zIndex: -10, top: "50%", left: "50%", transform: "translate(-50%, -50%)", width: "calc(100% + 2px)", height: "calc(100% + 2px)", backgroundImage: "linear-gradient(0deg, hsl(0, 0%, 100%) -50%, hsl(0, 0%, 40%) 100%)", borderRadius: "1rem" }}>
-                          <div style={{ content: "", pointerEvents: "none", position: "fixed", zIndex: 200, top: "50%", left: "50%", transform: "translate(-50%, -50%) rotate(0deg)", transformOrigin: "left", width: "200%", height: "10rem", backgroundImage: "linear-gradient(0deg, hsla(0, 0%, 100%, 0) 0%, hsl(277, 95%, 60%) 40%, hsl(277, 95%, 60%) 60%, hsla(0, 0%, 40%, 0) 100%)", animation: "rotate 8s linear infinite" }}></div>
-                        </div>
-
-                        <div className="flex items-center justify-between mb-6">
-                          <div className="flex items-center gap-3">
-                            <div className="h-10 w-10 rounded-xl border border-white/20 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-yellow-400"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-                            </div>
-                            <div>
-                              <h3 className="text-xl font-medium tracking-tight text-white">Cinematic High-End</h3>
-                              <p className="text-xs text-neutral-500">Premium quality</p>
-                            </div>
-                          </div>
-                          <div className="plan-radio h-5 w-5 rounded-full border-2 border-white/30"></div>
+                          <div style={{ content: "", pointerEvents: "none", position: "fixed", zIndex: 200, top: "50%", left: "50%", transform: "translate(-50%, -50%) rotate(0deg)", transformOrigin: "left", width: "200%", height: "10rem", backgroundImage: "linear-gradient(0deg, hsla(0, 0%, 100%, 0) 0%, hsl(150, 55%, 45%) 40%, hsl(150, 55%, 45%) 60%, hsla(0, 0%, 40%, 0) 100%)", animation: "rotate 8s linear infinite" }}></div>
                         </div>
 
                         <div className="mb-6">
-                          <p className="text-sm text-neutral-300 mb-3">Highest quality cinematic aerials</p>
-                          <p className="text-xs text-neutral-500">Luxury property • Brands</p>
+                          <h3 className="text-xl font-medium tracking-tight text-white">FPV</h3>
+                          <p className="text-xs text-neutral-500">High-risk / specialist</p>
+                        </div>
+
+                        <div className="mb-6">
+                          <p className="text-sm text-neutral-300 mb-3">Aggressive movement and close passes</p>
+                          <p className="text-xs text-neutral-500">Automotive • Action • Complex paths</p>
                         </div>
 
                         <div className="mb-6">
                           <div className="flex items-baseline gap-2">
-                            <span className="text-2xl font-semibold tracking-tight text-white">£POA</span>
+                            <span className="text-2xl font-semibold tracking-tight text-white">£220/hr</span>
                           </div>
-                          <p className="text-xs text-neutral-500 mt-1">Per session</p>
+                          <p className="text-xs text-neutral-500 mt-1">Per hour</p>
                         </div>
 
-                        <ul className="space-y-3 text-sm text-neutral-300">
-                          <li className="flex items-start gap-3">
-                            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "1rem", height: "1rem", backgroundColor: "hsl(266, 92%, 58%)", borderRadius: "50%" }}>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="hsl(240, 15%, 9%)" stroke="hsl(240, 15%, 9%)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
-                            </div>
-                            Full-frame cinema sensors
-                          </li>
-                          <li className="flex items-start gap-3">
-                            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "1rem", height: "1rem", backgroundColor: "hsl(266, 92%, 58%)", borderRadius: "50%" }}>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="hsl(240, 15%, 9%)" stroke="hsl(240, 15%, 9%)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
-                            </div>
-                            Full post-production services
-                          </li>
-                          <li className="flex items-start gap-3">
-                            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "1rem", height: "1rem", backgroundColor: "hsl(266, 92%, 58%)", borderRadius: "50%" }}>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="hsl(240, 15%, 9%)" stroke="hsl(240, 15%, 9%)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
-                            </div>
-                            Dedicated crew & equipment
-                          </li>
+                        <ul className="space-y-3 text-sm text-neutral-300 list-disc pl-5">
+                          <li>High-speed tracking and dynamic transitions</li>
+                          <li>Close-proximity FPV chase</li>
+                          <li>Specialist operation</li>
                         </ul>
                       </div>
                     </div>
                   </section>
 
-                  <section id="portfolio" className="relative px-6 py-32 md:px-12 lg:px-24 overflow-hidden bg-[#1a140f] w-full">
-                    <div className="absolute inset-0 pointer-events-none">
-                      <video
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                        className="h-full w-full object-cover opacity-35"
-                      >
-                        <source src="/raja-ampat-islands-22.mp4" type="video/mp4" />
-                      </video>
+                  <section className="px-6 pb-24 md:px-12 lg:px-24">
+                    <div className="mb-10 flex items-end justify-between gap-6">
+                      <div>
+                        <span className="font-mono text-xs uppercase tracking-[0.35em] text-secondary">APEX Packages & Pricing</span>
+                        <h3 className="mt-4 font-display text-3xl md:text-4xl tracking-tight text-primary">Packages by project type</h3>
+                      </div>
+                      <span className="text-secondary text-sm">Swipe to explore</span>
                     </div>
+
+                    <div className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory">
+                      {[
+                        {
+                          title: "Real Estate",
+                          price: "Starting from £450",
+                          lines: ["Exterior aerials", "Property context", "Edit: Basic or Premium"],
+                          accent: "from-emerald-500/20 to-teal-500/10",
+                        },
+                        {
+                          title: "Automotive - Cinematic Aerial",
+                          price: "Starting from £650",
+                          lines: ["Rolling shots", "Hero passes", "Edit: Basic or Premium"],
+                          accent: "from-green-500/20 to-emerald-500/10",
+                        },
+                        {
+                          title: "Automotive - FPV Chase",
+                          price: "Starting from £900",
+                          lines: ["Close-proximity FPV chase", "Dynamic passes", "Edit: Basic or Premium"],
+                          accent: "from-teal-500/20 to-emerald-500/10",
+                        },
+                        {
+                          title: "Tourism & Hospitality",
+                          price: "Starting from £600",
+                          lines: ["Exterior flyovers", "Location context", "Edit: Basic or Premium"],
+                          accent: "from-emerald-400/20 to-lime-500/10",
+                        },
+                        {
+                          title: "Construction",
+                          price: "Starting from £450",
+                          lines: ["Site overview", "Progress documentation", "Edit: Basic or Premium"],
+                          accent: "from-emerald-600/20 to-teal-500/10",
+                        },
+                        {
+                          title: "Construction Add-ons",
+                          price: "Add-on services",
+                          lines: ["Scheduled repeat visits", "Annotated footage", "Raw archive delivery"],
+                          accent: "from-emerald-600/15 to-teal-500/10",
+                        },
+                        {
+                          title: "Events (Non-live)",
+                          price: "Starting from £550",
+                          lines: ["Planned venue coverage", "Edit: Basic or Premium"],
+                          accent: "from-green-400/20 to-teal-500/10",
+                        },
+                        {
+                          title: "Marine",
+                          price: "Starting from £700",
+                          lines: ["Yacht / marina flyarounds", "Edit: Basic or Premium"],
+                          accent: "from-teal-500/20 to-cyan-500/10",
+                        },
+                      ].map((item) => (
+                        <div
+                          key={item.title}
+                          className={`min-w-[260px] snap-center rounded-2xl border border-white/10 bg-gradient-to-br ${item.accent} p-6 text-white shadow-[0_12px_40px_rgba(0,0,0,0.25)]`}
+                        >
+                          <h4 className="text-xl font-medium tracking-tight">{item.title}</h4>
+                          <p className="mt-2 text-sm text-white/70">{item.price}</p>
+                          <ul className="mt-4 space-y-2 text-xs text-white/75 list-disc pl-4">
+                            {item.lines.map((line) => (
+                              <li key={line}>{line}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="mt-12 grid gap-8 md:grid-cols-2">
+                      <div className="rounded-2xl border border-border bg-card p-6">
+                        <h4 className="text-lg font-medium text-primary">Edit Options</h4>
+                        <div className="mt-4 space-y-4 text-sm text-secondary">
+                          <div>
+                            <p className="font-medium text-primary">Basic Edit - included</p>
+                            <p>Clean cut, music, colour correction</p>
+                          </div>
+                          <div>
+                            <p className="font-medium text-primary">Premium Edit - +£200</p>
+                            <p>Cinematic pacing, advanced colour grade, sound design, social-ready master</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="rounded-2xl border border-border bg-card p-6">
+                        <h4 className="text-lg font-medium text-primary">Global Add-ons</h4>
+                        <ul className="mt-4 space-y-2 text-sm text-secondary list-disc pl-4">
+                          <li>Interior drone footage - +£120</li>
+                          <li>FPV sequences (non-automotive) - +£250</li>
+                          <li>Sunrise / sunset shoot - +£150</li>
+                          <li>Multiple locations - +£100 per location</li>
+                          <li>Extended shoot time - hourly rates below</li>
+                          <li>Raw footage delivery - +£100</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="mt-8 rounded-2xl border border-border bg-card p-6">
+                      <h4 className="text-lg font-medium text-primary">Multi-drone setups</h4>
+                      <p className="mt-2 text-sm text-secondary">Quoted per job.</p>
+                    </div>
+                  </section>
+
+                  <section id="portfolio" className="relative px-6 py-32 md:px-12 lg:px-24 overflow-hidden bg-gradient-to-b from-[#0f1a14] via-[#111c16] to-[#0f1411] w-full">
                     <div className="relative mx-auto max-w-7xl">
                       <div className="mb-16 reveal" style={{ transitionDelay: "0ms" }}>
-                        <span className="font-mono text-xs uppercase tracking-[0.35em] text-amber-300">Portfolio</span>
+                        <span className="font-mono text-xs uppercase tracking-[0.35em] text-emerald-300">Portfolio</span>
                         <h2 className="mt-4 font-display text-5xl tracking-tight text-white md:text-6xl lg:text-7xl">Featured Work</h2>
-                        <p className="mt-6 max-w-3xl text-base text-amber-50 leading-relaxed">From serene landscapes to towering structures, each project showcases our mastery of aerial cinematography and precision documentation.</p>
+                        <p className="mt-6 max-w-3xl text-base text-emerald-50 leading-relaxed">From serene landscapes to towering structures, each project showcases our mastery of aerial cinematography and precision documentation.</p>
                       </div>
 
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -534,17 +570,22 @@ export default function Home() {
                             style={{ transitionDelay: `${idx * 100}ms` }}
                           >
                             <div className="absolute inset-0 bg-neutral-800">
-                              <img
-                                src={project.image}
-                                alt={project.title}
+                              <video
                                 className="h-full w-full object-cover transition-transform duration-[2000ms] ease-out group-hover:scale-105"
-                              />
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
+                                preload="metadata"
+                              >
+                                <source src={project.video} type="video/mp4" />
+                              </video>
                             </div>
                             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-500" />
                             
                             <div className="absolute inset-0 p-6 flex flex-col justify-end transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
                               <div className="flex items-center gap-2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                <span className="px-2 py-0.5 rounded text-[10px] font-medium bg-amber-400 text-black uppercase tracking-wide">{project.tag}</span>
+                                <span className="px-2 py-0.5 rounded text-[10px] font-medium bg-emerald-400 text-black uppercase tracking-wide">{project.tag}</span>
                               </div>
                               <h3 className="text-xl md:text-2xl font-medium text-white tracking-tight mb-2">{project.title}</h3>
                               <p className="text-xs text-white/70">{project.location}</p>
@@ -561,18 +602,27 @@ export default function Home() {
 
                   <section className="px-6 py-24 md:px-12 lg:px-24">
                     <div className="mb-14 flex flex-col items-start justify-between gap-6 border-b border-border pb-8 md:flex-row md:items-end">
-                      <h3 className="font-display text-4xl leading-tight md:text-5xl">The view from the oblique angle.</h3>
-                      <span className="text-secondary">Atmospheric studies, ready for flight.</span>
+                      <h3 className="font-display text-4xl leading-tight md:text-5xl">Aerial highlights from recent flights.</h3>
+                      <span className="text-secondary">Client-ready selects from our cinematic drone work.</span>
                     </div>
                     <div className="grid h-[55vh] grid-cols-2 gap-4 md:grid-cols-4">
-                      {gallery.map((image, idx) => (
+                      {gallery.map((videoSrc, idx) => (
                         <div
-                          key={image}
+                          key={videoSrc}
                           className={`relative overflow-hidden rounded-xl ${idx % 2 === 1 ? "mt-10 md:mt-20" : ""}`}
                         >
-                          <img src={image} alt="Aerial still" className="h-full w-full object-cover transition-all duration-700 hover:scale-105 hover:grayscale-0 grayscale" />
+                          <video
+                            className="h-full w-full object-cover transition-all duration-700 hover:scale-105"
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            preload="metadata"
+                          >
+                            <source src={videoSrc} type="video/mp4" />
+                          </video>
                           <span className="absolute bottom-3 left-3 font-mono text-[10px] uppercase tracking-[0.3em] text-white mix-blend-difference">
-                            {idx === 0 ? "SENSOR_01" : idx === 1 ? "ISO_400" : idx === 2 ? "ALT_400" : "READY"}
+                            {idx === 0 ? "Highland Trail" : idx === 1 ? "Forest Path" : idx === 2 ? "Still Waters" : "Yacht Glide"}
                           </span>
                         </div>
                       ))}

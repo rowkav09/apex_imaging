@@ -7,69 +7,6 @@ import Header from '../components/Header';
 
 export default function PortfolioPage() {
   useEffect(() => {
-    // Dynamic background gradient
-    const handlePointerMove = (e: PointerEvent) => {
-      const { currentTarget: el, clientX: x, clientY: y } = e;
-      if (el instanceof HTMLElement) {
-        const { top: t, left: l, width: w, height: h } = el.getBoundingClientRect();
-        el.style.setProperty('--posX', String(x - l - w / 2));
-        el.style.setProperty('--posY', String(y - t - h / 2));
-      }
-    };
-    document.body.addEventListener('pointermove', handlePointerMove);
-
-    // Custom cursor
-    const handleMouseMove = (n: MouseEvent) => {
-      const t = document.getElementById("cursor");
-      const e = document.getElementById("cursor2");
-      const header = document.querySelector('nav');
-      const headerHeight = header ? header.offsetHeight : 80;
-      
-      // Hide cursor when in header area
-      if (n.clientY < headerHeight) {
-        t?.style.setProperty('opacity', '0');
-        e?.style.setProperty('opacity', '0');
-      } else {
-        if (!t?.classList.contains('hover')) {
-          t?.style.removeProperty('opacity');
-        }
-        if (!e?.classList.contains('hover')) {
-          e?.style.removeProperty('opacity');
-        }
-      }
-      
-      if (t) {
-        t.style.left = n.clientX + "px";
-        t.style.top = n.clientY + "px";
-      }
-      if (e) {
-        e.style.left = n.clientX + "px";
-        e.style.top = n.clientY + "px";
-      }
-    };
-
-    const handleHoverIn = () => {
-      const t = document.getElementById("cursor");
-      const e = document.getElementById("cursor2");
-      t?.classList.add("hover");
-      e?.classList.add("hover");
-    };
-
-    const handleHoverOut = () => {
-      const t = document.getElementById("cursor");
-      const e = document.getElementById("cursor2");
-      t?.classList.remove("hover");
-      e?.classList.remove("hover");
-    };
-
-    document.body.addEventListener("mousemove", handleMouseMove);
-    
-    const hoverTargets = document.querySelectorAll(".hover-target");
-    hoverTargets.forEach((target) => {
-      target.addEventListener("mouseover", handleHoverIn);
-      target.addEventListener("mouseout", handleHoverOut);
-    });
-
     // Section handlers
     const setupSectionHandlers = () => {
       const fpvBtn = document.querySelector(".fpv");
@@ -123,8 +60,6 @@ export default function PortfolioPage() {
     handleSectionScroll();
 
     return () => {
-      document.body.removeEventListener("mousemove", handleMouseMove);
-      document.body.removeEventListener("pointermove", handlePointerMove as any);
       document.body.className = "";
     };
   }, []);
@@ -140,76 +75,63 @@ export default function PortfolioPage() {
           font-weight: 300;
           font-size: 15px;
           line-height: 1.6;
-          color: #fff;
+          color: #e9f7ef;
           height: 100vh;
           margin: 0;
-          --x: calc(var(--posX, 0) * 1px);
-          --y: calc(var(--posY, 0) * 1px);
-          background-image: 
-            linear-gradient(115deg, rgb(211 255 215), rgb(0 0 0)), 
-            radial-gradient(90% 100% at calc(50% + var(--x)) calc(0% + var(--y)), rgb(200 200 200), rgb(022 000 045)), 
-            radial-gradient(100% 100% at calc(80% - var(--x)) calc(0% - var(--y)), rgb(250 255 000), rgb(036 000 000)), 
-            radial-gradient(150% 210% at calc(100% + var(--x)) calc(0% + var(--y)), rgb(020 175 125), rgb(000 010 255)), 
-            radial-gradient(100% 100% at calc(100% - var(--x)) calc(30% - var(--y)), rgb(255 077 000), rgb(000 200 255)), 
-            linear-gradient(60deg, rgb(255 000 000), rgb(120 086 255));
-          background-blend-mode: overlay, overlay, difference, difference, difference, normal;
+          background: radial-gradient(120% 120% at 20% 0%, rgba(98, 180, 135, 0.45) 0%, rgba(12, 22, 16, 0.98) 45%),
+            radial-gradient(140% 140% at 80% 10%, rgba(60, 120, 95, 0.55) 0%, rgba(12, 22, 16, 0.98) 55%),
+            linear-gradient(135deg, rgba(24, 44, 32, 0.7), rgba(10, 20, 14, 0.9));
+          background-size: 160% 160%;
+          animation: ambientShift 18s ease-in-out infinite;
           overflow: hidden;
           transition: all 300ms linear;
           perspective: 800px;
         }
 
-        .cursor, .cursor2, .cursor3 {
-          position: fixed;
-          transform: translateX(-50%) translateY(-50%);
-          pointer-events: none;
-          left: -100px;
-          top: 50%;
-          transition: all 300ms linear;
+        @keyframes ambientShift {
+          0% {
+            background-position: 0% 0%, 100% 0%, 0% 0%;
+          }
+          50% {
+            background-position: 80% 40%, 20% 60%, 0% 0%;
+          }
+          100% {
+            background-position: 0% 0%, 100% 0%, 0% 0%;
+          }
         }
 
-        .cursor {
-          width: 48px;
-          height: 48px;
-          z-index: 99999;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+        body.fpv-on {
+          background: radial-gradient(140% 120% at 15% 10%, rgba(120, 190, 145, 0.6) 0%, rgba(10, 20, 14, 0.98) 45%),
+            radial-gradient(140% 120% at 85% 20%, rgba(60, 140, 105, 0.55) 0%, rgba(10, 20, 14, 0.98) 55%),
+            linear-gradient(135deg, rgba(22, 42, 30, 0.75), rgba(10, 20, 14, 0.9));
+          background-size: 160% 160%;
+          animation: ambientShift 14s ease-in-out infinite;
         }
 
-        .cursor svg {
-          width: 100%;
-          height: 100%;
-          fill: none;
-          stroke: #fff;
-          stroke-width: 1.5;
-          filter: drop-shadow(0 0 3px rgba(255,255,255,0.6));
-          stroke-linecap: round;
-          stroke-linejoin: round;
+        body.cinematic-on {
+          background: radial-gradient(140% 120% at 20% 0%, rgba(110, 185, 140, 0.6) 0%, rgba(9, 18, 13, 0.98) 45%),
+            radial-gradient(140% 120% at 90% 20%, rgba(55, 125, 95, 0.6) 0%, rgba(9, 18, 13, 0.98) 55%),
+            linear-gradient(135deg, rgba(18, 36, 26, 0.75), rgba(9, 18, 13, 0.9));
+          background-size: 160% 160%;
+          animation: ambientShift 16s ease-in-out infinite;
         }
 
-        .cursor.hover {
-          opacity: 0;
-          transform: translateX(-50%) translateY(-50%) scale(0);
+        body.neo1-on {
+          background: radial-gradient(140% 120% at 20% 0%, rgba(125, 200, 150, 0.55) 0%, rgba(10, 22, 16, 0.98) 45%),
+            radial-gradient(120% 120% at 80% 30%, rgba(70, 140, 110, 0.55) 0%, rgba(10, 22, 16, 0.98) 55%),
+            linear-gradient(135deg, rgba(20, 40, 30, 0.75), rgba(10, 22, 16, 0.9));
+          background-size: 160% 160%;
+          animation: ambientShift 18s ease-in-out infinite;
         }
 
-        .cursor2 {
-          width: 8px;
-          height: 8px;
-          border-radius: 50%;
-          border: 2px solid #fff;
-          background: transparent;
-          z-index: 99998;
-          opacity: 0;
-          transition: all 0.3s ease-out;
+        body.camera-on {
+          background: radial-gradient(140% 120% at 25% 0%, rgba(110, 185, 145, 0.55) 0%, rgba(9, 19, 14, 0.98) 45%),
+            radial-gradient(140% 120% at 85% 25%, rgba(55, 130, 100, 0.55) 0%, rgba(9, 19, 14, 0.98) 55%),
+            linear-gradient(135deg, rgba(18, 36, 26, 0.75), rgba(9, 19, 14, 0.9));
+          background-size: 160% 160%;
+          animation: ambientShift 16s ease-in-out infinite;
         }
 
-        .cursor2.hover {
-          opacity: 1;
-          width: 50px;
-          height: 50px;
-          background: rgba(255,255,255,0.1);
-          border-color: #fff;
-        }
 
         .hero-section {
           position: relative;
@@ -234,7 +156,7 @@ export default function PortfolioPage() {
 
         .hero-section .dancing {
           letter-spacing: 1px;
-          color: #ffeba7;
+          color: #c9f2dc;
           font-size: 25px;
           line-height: 1;
           font-weight: 700;
@@ -249,14 +171,21 @@ export default function PortfolioPage() {
           padding-right: 10px;
           display: inline-block;
           border-radius: 5px;
-          background-color: #102770;
+          background-color: #234233;
         }
 
         .hero-section p {
           font-size: 20px;
           line-height: 1;
           font-weight: 700;
-          color: #ffeba7;
+          color: #c9f2dc;
+        }
+
+        .fpv-section p,
+        .cinematic-section p,
+        .neo1-section p,
+        .camera-section p {
+          color: #e9f7ef;
         }
 
         .hero-section p span {
@@ -275,6 +204,14 @@ export default function PortfolioPage() {
           transition-delay: 0ms;
         }
 
+        body.fpv-on .hero-section,
+        body.cinematic-on .hero-section,
+        body.neo1-on .hero-section,
+        body.camera-on .hero-section {
+          opacity: 0;
+          pointer-events: none;
+        }
+
         .fpv-section,
         .cinematic-section,
         .neo1-section,
@@ -288,9 +225,19 @@ export default function PortfolioPage() {
           display: block;
           overflow-x: hidden;
           overflow-y: auto;
-          background-color: #102770;
+          background-color: transparent;
+          backdrop-filter: blur(0.5px);
           transition: all 300ms linear;
           z-index: 10;
+          scrollbar-width: none;
+        }
+
+        .fpv-section::-webkit-scrollbar,
+        .cinematic-section::-webkit-scrollbar,
+        .neo1-section::-webkit-scrollbar,
+        .camera-section::-webkit-scrollbar {
+          width: 0;
+          height: 0;
         }
 
         .fpv-close,
@@ -298,7 +245,7 @@ export default function PortfolioPage() {
         .neo1-close,
         .camera-close {
           position: absolute;
-          top: 20px;
+          top: 96px;
           right: 20px;
           width: 30px;
           display: block;
@@ -331,7 +278,11 @@ export default function PortfolioPage() {
         .fpv-section img,
         .cinematic-section img,
         .neo1-section img,
-        .camera-section img {
+        .camera-section img,
+        .fpv-section video,
+        .cinematic-section video,
+        .neo1-section video,
+        .camera-section video {
           margin-top: 30px;
           width: 100%;
           height: auto;
@@ -369,7 +320,7 @@ export default function PortfolioPage() {
           font-size: 20px;
           line-height: 1.3;
           font-weight: 700;
-          color: #ffeba7;
+          color: #c9f2dc;
         }
 
         .section-center {
@@ -386,7 +337,7 @@ export default function PortfolioPage() {
           top: 30px;
           left: 30px;
           z-index: 200000;
-          color: #ffeba7;
+          color: #c9f2dc;
           font-size: 14px;
           font-weight: 600;
           text-decoration: none;
@@ -453,29 +404,12 @@ export default function PortfolioPage() {
             </div>
             <div className="col-12 text-center">
               <p>
-                Camera: GoPro Hero 12<br />
-                Max Speed: 120mph<br />
-                Flight Time: 4-6 minutes<br />
+                Drone: FPV<br />
                 Use: Automotive • Action • Indoor
               </p>
             </div>
-            <div className="col-md-6 col-lg-4">
-              <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?q=80&w=2000&auto=format&fit=crop" alt="FPV Work 1" />
-            </div>
-            <div className="col-md-6 col-lg-4">
-              <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=1600&auto=format&fit=crop" alt="FPV Work 2" />
-            </div>
-            <div className="col-md-6 col-lg-4">
-              <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1600&auto=format&fit=crop" alt="FPV Work 3" />
-            </div>
-            <div className="col-md-6 col-lg-4">
-              <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop" alt="FPV Work 4" />
-            </div>
-            <div className="col-md-6 col-lg-4">
-              <img src="https://images.unsplash.com/photo-1506947411487-a56738267384?q=80&w=2834&auto=format&fit=crop" alt="FPV Work 5" />
-            </div>
-            <div className="col-md-6 col-lg-4">
-              <img src="https://images.unsplash.com/photo-1504829857797-ddff29c27927?q=80&w=2940&auto=format&fit=crop" alt="FPV Work 6" />
+            <div className="col-12 text-center mt-4">
+              <p>There’s nothing here yet.</p>
             </div>
           </div>
         </div>
@@ -494,29 +428,99 @@ export default function PortfolioPage() {
             </div>
             <div className="col-12 text-center">
               <p>
-                Camera: RED Komodo / Arri Mini<br />
-                Max Speed: 45mph<br />
-                Flight Time: 12-15 minutes<br />
+                Drone: Cinema platform<br />
                 Use: Film • Real Estate • Commercials
               </p>
             </div>
             <div className="col-md-6 col-lg-4">
-              <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=2670&auto=format&fit=crop" alt="Cinematic Work 1" />
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                controls
+                onClick={(event) => {
+                  const video = event.currentTarget;
+                  if (video.requestFullscreen) {
+                    video.requestFullscreen();
+                  }
+                }}
+              >
+                <source src="/non_paid/mountain_walk.MP4" type="video/mp4" />
+              </video>
             </div>
             <div className="col-md-6 col-lg-4">
-              <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop" alt="Cinematic Work 2" />
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                controls
+                onClick={(event) => {
+                  const video = event.currentTarget;
+                  if (video.requestFullscreen) {
+                    video.requestFullscreen();
+                  }
+                }}
+              >
+                <source src="/non_paid/walk.MP4" type="video/mp4" />
+              </video>
             </div>
             <div className="col-md-6 col-lg-4">
-              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2670&auto=format&fit=crop" alt="Cinematic Work 3" />
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                controls
+                onClick={(event) => {
+                  const video = event.currentTarget;
+                  if (video.requestFullscreen) {
+                    video.requestFullscreen();
+                  }
+                }}
+              >
+                <source src="/non_paid/water.MP4" type="video/mp4" />
+              </video>
             </div>
             <div className="col-md-6 col-lg-4">
-              <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?q=80&w=2000&auto=format&fit=crop" alt="Cinematic Work 4" />
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                controls
+                onClick={(event) => {
+                  const video = event.currentTarget;
+                  if (video.requestFullscreen) {
+                    video.requestFullscreen();
+                  }
+                }}
+              >
+                <source src="/non_paid/yacht.mp4" type="video/mp4" />
+              </video>
             </div>
             <div className="col-md-6 col-lg-4">
-              <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=1600&auto=format&fit=crop" alt="Cinematic Work 5" />
-            </div>
-            <div className="col-md-6 col-lg-4">
-              <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1600&auto=format&fit=crop" alt="Cinematic Work 6" />
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                controls
+                onClick={(event) => {
+                  const video = event.currentTarget;
+                  if (video.requestFullscreen) {
+                    video.requestFullscreen();
+                  }
+                }}
+              >
+                <source src="/non_paid/yacht_rainbow.MP4" type="video/mp4" />
+              </video>
             </div>
           </div>
         </div>
@@ -535,29 +539,12 @@ export default function PortfolioPage() {
             </div>
             <div className="col-12 text-center">
               <p>
-                Camera: 4K/30fps Stabilized<br />
-                Max Speed: 35mph<br />
-                Flight Time: 18 minutes<br />
+                Drone: Neo1<br />
                 Use: Indoor • Close Proximity • POV
               </p>
             </div>
-            <div className="col-md-6 col-lg-4">
-              <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop" alt="Neo1 Work 1" />
-            </div>
-            <div className="col-md-6 col-lg-4">
-              <img src="https://images.unsplash.com/photo-1506947411487-a56738267384?q=80&w=2834&auto=format&fit=crop" alt="Neo1 Work 2" />
-            </div>
-            <div className="col-md-6 col-lg-4">
-              <img src="https://images.unsplash.com/photo-1504829857797-ddff29c27927?q=80&w=2940&auto=format&fit=crop" alt="Neo1 Work 3" />
-            </div>
-            <div className="col-md-6 col-lg-4">
-              <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=2670&auto=format&fit=crop" alt="Neo1 Work 4" />
-            </div>
-            <div className="col-md-6 col-lg-4">
-              <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop" alt="Neo1 Work 5" />
-            </div>
-            <div className="col-md-6 col-lg-4">
-              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2670&auto=format&fit=crop" alt="Neo1 Work 6" />
+            <div className="col-12 text-center mt-4">
+              <p>There’s nothing here yet.</p>
             </div>
           </div>
         </div>
@@ -576,60 +563,16 @@ export default function PortfolioPage() {
             </div>
             <div className="col-12 text-center">
               <p>
-                A collection of our best work<br />
-                across all drone platforms<br />
-                showcasing diverse projects<br />
-                and creative excellence
+                Drone: Mixed fleet<br />
+                Use: Highlights across all platforms
               </p>
             </div>
-            <div className="col-md-6 col-lg-4">
-              <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?q=80&w=2000&auto=format&fit=crop" alt="Camera Work 1" />
-            </div>
-            <div className="col-md-6 col-lg-4">
-              <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=1600&auto=format&fit=crop" alt="Camera Work 2" />
-            </div>
-            <div className="col-md-6 col-lg-4">
-              <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1600&auto=format&fit=crop" alt="Camera Work 3" />
-            </div>
-            <div className="col-md-6 col-lg-4">
-              <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop" alt="Camera Work 4" />
-            </div>
-            <div className="col-md-6 col-lg-4">
-              <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=2670&auto=format&fit=crop" alt="Camera Work 5" />
-            </div>
-            <div className="col-md-6 col-lg-4">
-              <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop" alt="Camera Work 6" />
-            </div>
-            <div className="col-md-6 col-lg-4">
-              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2670&auto=format&fit=crop" alt="Camera Work 7" />
-            </div>
-            <div className="col-md-6 col-lg-4">
-              <img src="https://images.unsplash.com/photo-1506947411487-a56738267384?q=80&w=2834&auto=format&fit=crop" alt="Camera Work 8" />
-            </div>
-            <div className="col-md-6 col-lg-4">
-              <img src="https://images.unsplash.com/photo-1504829857797-ddff29c27927?q=80&w=2940&auto=format&fit=crop" alt="Camera Work 9" />
+            <div className="col-12 text-center mt-4">
+              <p>There’s nothing here yet.</p>
             </div>
           </div>
         </div>
       </div>
-
-      <div className='cursor' id="cursor">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          {/* Center body */}
-          <circle cx="12" cy="12" r="2.5"/>
-          {/* Arms */}
-          <line x1="6" y1="12" x2="2" y2="12"/>
-          <line x1="18" y1="12" x2="22" y2="12"/>
-          <line x1="12" y1="6" x2="12" y2="2"/>
-          <line x1="12" y1="18" x2="12" y2="22"/>
-          {/* Propellers */}
-          <circle cx="2" cy="12" r="1.5"/>
-          <circle cx="22" cy="12" r="1.5"/>
-          <circle cx="12" cy="2" r="1.5"/>
-          <circle cx="12" cy="22" r="1.5"/>
-        </svg>
-      </div>
-      <div className='cursor2' id="cursor2"></div>
 
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     </>
