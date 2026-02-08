@@ -693,9 +693,9 @@ export default function Home() {
                   {/* Footer */}
                   <footer id="contact" className="relative bg-[#3d5a66] px-6 py-20 md:px-12 lg:px-24">
                     <div className="max-w-7xl mx-auto">
-                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8">
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-8">
                         {/* Brand */}
-                        <div className="lg:col-span-1">
+                        <div>
                           <div className="flex items-center gap-3 mb-6">
                             <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30">
                               <span className="h-1.5 w-1.5 rounded-full bg-[#7a9aa8]" />
@@ -726,11 +726,7 @@ export default function Home() {
                           <ul className="space-y-2 text-sm text-white/60">
                             <li className="flex items-center gap-2">
                               <span className="text-[#7a9aa8]">✉</span>
-                              <a href="mailto:hello@apeximaging.co.uk" className="hover:text-white transition-colors">hello@apeximaging.co.uk</a>
-                            </li>
-                            <li className="flex items-center gap-2">
-                              <span className="text-[#7a9aa8]">☎</span>
-                              <a href="tel:+447123456789" className="hover:text-white transition-colors">+44 7123 456 789</a>
+                              <a href="mailto:rowkav0809@gmail.com" className="hover:text-white transition-colors">rowkav0809@gmail.com</a>
                             </li>
                             <li className="flex items-start gap-2 mt-4">
                               <span className="text-[#7a9aa8] mt-0.5">◎</span>
@@ -739,20 +735,7 @@ export default function Home() {
                           </ul>
                         </div>
 
-                        {/* Legal & Social */}
-                        <div>
-                          <h4 className="text-xs font-medium uppercase tracking-[0.2em] text-[#7a9aa8] mb-4">Legal</h4>
-                          <ul className="space-y-2 text-sm text-white/60 mb-6">
-                            <li>CAA Registered Operator</li>
-                            <li>A2 CofC Certified Pilot</li>
-                            <li>£5M Public Liability Insurance</li>
-                          </ul>
-                          <div className="flex gap-3">
-                            <a href="#" className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-[#7a9aa8] transition-colors text-sm">in</a>
-                            <a href="#" className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-[#7a9aa8] transition-colors text-sm">ig</a>
-                            <a href="#" className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-[#7a9aa8] transition-colors text-sm">yt</a>
-                          </div>
-                        </div>
+
                       </div>
 
                       {/* Bottom bar */}
