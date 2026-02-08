@@ -737,15 +737,6 @@ export default function Home() {
 
 
                       </div>
-
-                      {/* Bottom bar */}
-                      <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-                        <p className="text-xs text-white/40">© 2025 Apex Imaging. All rights reserved.</p>
-                        <div className="flex gap-6 text-xs text-white/40">
-                          <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                          <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-                        </div>
-                      </div>
                     </div>
                   </footer>
                 </main>
