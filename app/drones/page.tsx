@@ -569,8 +569,30 @@ export default function PortfolioPage() {
                 DJI O4 Air Unit Pro — O4 FPV Camera (1/1.3″ CMOS)
               </p>
             </div>
-            <div className="col-12 text-center mt-4">
-              <p>There’s nothing here yet.</p>
+            <div className="col-12 mt-4">
+              <div className="row g-3">
+                <div className="col-6 col-md-4">
+                  <img src="/photos/DRONE1_1.1.1.jpg" alt="Drone 1" />
+                </div>
+                <div className="col-6 col-md-4">
+                  <img src="/photos/DRONE2_1.1.2.jpg" alt="Drone 2" />
+                </div>
+                <div className="col-6 col-md-4">
+                  <img src="/photos/CONTROLLER2_1.1.3.jpg" alt="Controller" />
+                </div>
+                <div className="col-6 col-md-4">
+                  <img src="/photos/DRON3_1.1.4.jpg" alt="Drone 3" />
+                </div>
+                <div className="col-6 col-md-4">
+                  <img src="/photos/MAX2_1.1.5.jpg" alt="Max 2" />
+                </div>
+                <div className="col-6 col-md-4">
+                  <img src="/photos/DRONE4_1.1.6.jpg" alt="Drone 4" />
+                </div>
+                <div className="col-6 col-md-4">
+                  <img src="/photos/DRONE5_1.1.7.jpg" alt="Drone 5" />
+                </div>
+              </div>
             </div>
           </div>
         </div>

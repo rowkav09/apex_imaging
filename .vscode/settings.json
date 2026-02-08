@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^git add -A; git commit -m \"Add photos to camera portfolio section\"; git push$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
