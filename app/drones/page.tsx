@@ -447,7 +447,7 @@ export default function PortfolioPage() {
                   }
                 }}
               >
-                <source src="/non_paid/mountain_walk.MP4" type="video/mp4" />
+                <source src="/videos/mountain_walk.MP4" type="video/mp4" />
               </video>
             </div>
             <div className="col-md-6 col-lg-4">
@@ -465,7 +465,7 @@ export default function PortfolioPage() {
                   }
                 }}
               >
-                <source src="/non_paid/walk.MP4" type="video/mp4" />
+                <source src="/videos/walk.MP4" type="video/mp4" />
               </video>
             </div>
             <div className="col-md-6 col-lg-4">
@@ -483,7 +483,7 @@ export default function PortfolioPage() {
                   }
                 }}
               >
-                <source src="/non_paid/water.MP4" type="video/mp4" />
+                <source src="/videos/water.MP4" type="video/mp4" />
               </video>
             </div>
             <div className="col-md-6 col-lg-4">
@@ -501,7 +501,7 @@ export default function PortfolioPage() {
                   }
                 }}
               >
-                <source src="/non_paid/yacht.mp4" type="video/mp4" />
+                <source src="/videos/yacht.mp4" type="video/mp4" />
               </video>
             </div>
             <div className="col-md-6 col-lg-4">
@@ -519,7 +519,7 @@ export default function PortfolioPage() {
                   }
                 }}
               >
-                <source src="/non_paid/yacht_rainbow.MP4" type="video/mp4" />
+                <source src="/videos/yacht_rainbow.MP4" type="video/mp4" />
               </video>
             </div>
           </div>

@@ -158,31 +158,31 @@ export default function Home() {
                 title: "Highland Trail",
                 tag: "Landscape",
                 location: "UK",
-                video: "https://5ff6zfnz7wpr5bj7.public.blob.vercel-storage.com/mountain_walk.MP4",
+                video: "/videos/mountain_walk.MP4",
               },
               {
                 title: "Forest Path",
                 tag: "Lifestyle",
                 location: "UK",
-                video: "https://5ff6zfnz7wpr5bj7.public.blob.vercel-storage.com/walk.MP4",
+                video: "/videos/walk.MP4",
               },
               {
                 title: "Still Waters",
                 tag: "Waterscape",
                 location: "UK",
-                video: "https://5ff6zfnz7wpr5bj7.public.blob.vercel-storage.com/water.MP4",
+                video: "/videos/water.MP4",
               },
               {
                 title: "Yacht Glide",
                 tag: "Marine",
                 location: "UK",
-                video: "https://5ff6zfnz7wpr5bj7.public.blob.vercel-storage.com/yacht.mp4",
+                video: "/videos/yacht.mp4",
               },
               {
                 title: "Yacht Rainbow Run",
                 tag: "Marine",
                 location: "UK",
-                video: "https://5ff6zfnz7wpr5bj7.public.blob.vercel-storage.com/yacht_rainbow.MP4",
+                video: "/videos/yacht_rainbow.MP4",
               },
             ];
 
@@ -208,10 +208,10 @@ export default function Home() {
             ];
 
             const gallery = [
-              "https://5ff6zfnz7wpr5bj7.public.blob.vercel-storage.com/mountain_walk.MP4",
-              "https://5ff6zfnz7wpr5bj7.public.blob.vercel-storage.com/walk.MP4",
-              "https://5ff6zfnz7wpr5bj7.public.blob.vercel-storage.com/water.MP4",
-              "https://5ff6zfnz7wpr5bj7.public.blob.vercel-storage.com/yacht.mp4",
+              "/videos/mountain_walk.MP4",
+              "/videos/walk.MP4",
+              "/videos/water.MP4",
+              "/videos/yacht.mp4",
             ];
 
   return (
@@ -228,9 +228,9 @@ export default function Home() {
                         muted
                         loop
                         playsInline
-                        preload="metadata"
+                        preload="auto"
                       >
-                        <source src="https://5ff6zfnz7wpr5bj7.public.blob.vercel-storage.com/hero.mp4" type="video/mp4" />
+                        <source src="/videos/hero_compressed.mp4" type="video/mp4" />
                       </video>
                       {/* Mobile video - uses same for now, add mobile version later */}
                       <video
@@ -239,9 +239,9 @@ export default function Home() {
                         muted
                         loop
                         playsInline
-                        preload="metadata"
+                        preload="auto"
                       >
-                        <source src="https://5ff6zfnz7wpr5bj7.public.blob.vercel-storage.com/hero.mp4" type="video/mp4" />
+                        <source src="/videos/hero_compressed.mp4" type="video/mp4" />
                       </video>
                     </div>
                   </div>
