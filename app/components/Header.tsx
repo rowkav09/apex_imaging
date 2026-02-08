@@ -8,7 +8,7 @@ export default function Header() {
   const [showNav, setShowNav] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
-  const isPortfolioPage = pathname === '/drones';
+  const isPortfolioPage = pathname === '/portfolio';
 
   useEffect(() => {
     if (isPortfolioPage) {
@@ -34,7 +34,7 @@ export default function Header() {
           {[
             { name: 'Home', href: '/', color: 'bg-[#0f1a14]' },
             { name: 'Services', href: '/#drone-services', color: 'bg-[#172a1f]' },
-            { name: 'Portfolio', href: '/drones', color: 'bg-[#1f3628]' },
+            { name: 'Portfolio', href: '/portfolio', color: 'bg-[#1f3628]' },
             { name: 'Contact', href: '/#contact', color: 'bg-[#274533]' },
           ].map((item, idx) => (
             <div
@@ -49,7 +49,8 @@ export default function Header() {
               <Link
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-white text-2xl md:text-3xl font-light hover:text-[#7a9aa8] transition-colors"
+                className="text-white text-2xl md:text-3xl font-light hover:text-[#7a9aa8] transition-colors no-underline"
+                style={{ textDecoration: 'none' }}
               >
                 {item.name}
               </Link>
@@ -78,11 +79,11 @@ export default function Header() {
         aria-hidden={!showNav}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3 no-underline" style={{ textDecoration: 'none' }}>
             <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30">
               <span className="h-1.5 w-1.5 rounded-full bg-white" />
             </div>
-            <span className="font-display text-lg tracking-tight text-white">APEX</span>
+            <span className="font-display text-lg tracking-tight text-white no-underline">APEX</span>
           </Link>
 
           <div className="flex items-center gap-4">
@@ -96,7 +97,8 @@ export default function Header() {
             </button>
             <a
               href="/#contact"
-              className="group hidden md:flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-medium uppercase tracking-[0.2em] text-black transition-all duration-300 hover:bg-[#7a9aa8]"
+              className="group hidden md:flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-medium uppercase tracking-[0.2em] text-black transition-all duration-300 hover:bg-[#7a9aa8] no-underline"
+              style={{ textDecoration: 'none' }}
             >
               Inquire
               <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>

@@ -395,11 +395,11 @@ export default function Home() {
                   <section id="drone-services" className="relative px-6 py-20 md:py-24 md:px-12 lg:px-24 bg-[#e8eef3]">
                     <div className="mb-10 md:mb-14 max-w-7xl mx-auto">
                       <span className="font-mono text-xs uppercase tracking-[0.35em] text-[#5a6d78]">03 — Fleet</span>
-                      <h2 className="mt-4 font-display text-3xl md:text-5xl lg:text-6xl tracking-tight text-[#3d5a66]">Our Drones</h2>
+                      <h2 className="mt-4 font-display text-3xl md:text-5xl lg:text-6xl tracking-tight text-[#3d5a66]">Our Equipment</h2>
                       <p className="mt-4 text-sm text-[#5a6d78] leading-relaxed max-w-2xl">Clear hourly pricing for the right platform.</p>
                     </div>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-7xl mx-auto">
                       {/* Mini Drone - Cinematic */}
                       <div className="rounded-2xl border border-neutral-200 bg-card p-6 hover:border-[#5a6d78] hover:shadow-lg transition-all duration-300">
                         <div className="mb-1">
@@ -505,6 +505,33 @@ export default function Home() {
                           <li className="flex items-start gap-2"><span className="text-[#5a6d78] mt-0.5">•</span>NEO wide-angle CMOS</li>
                           <li className="flex items-start gap-2"><span className="text-[#5a6d78] mt-0.5">•</span>135g ultra-lightweight</li>
                           <li className="flex items-start gap-2"><span className="text-[#5a6d78] mt-0.5">•</span>Prop guards, indoor-safe</li>
+                        </ul>
+                      </div>
+
+                      {/* Camera Equipment */}
+                      <div className="rounded-2xl border border-neutral-200 bg-card p-6 hover:border-[#5a6d78] hover:shadow-lg transition-all duration-300">
+                        <div className="mb-1">
+                          <span className="text-[10px] font-medium text-[#8a6d58] uppercase tracking-wider">Ground Camera</span>
+                        </div>
+                        <div className="mb-5">
+                          <h3 className="text-lg font-medium tracking-tight text-primary">Canon 750D</h3>
+                          <p className="text-xs text-secondary mt-1">DSLR camera system</p>
+                        </div>
+
+                        <div className="mb-5">
+                          <p className="text-sm text-secondary mb-2">Professional photo & video</p>
+                          <p className="text-xs text-neutral-400">Portraits • Products • Events</p>
+                        </div>
+
+                        <div className="mb-5 pb-5 border-b border-neutral-100">
+                          <span className="text-2xl font-semibold tracking-tight text-[#5a6d78]">£100</span>
+                          <span className="text-sm text-secondary">/hr</span>
+                        </div>
+
+                        <ul className="space-y-2 text-sm text-secondary">
+                          <li className="flex items-start gap-2"><span className="text-[#5a6d78] mt-0.5">•</span>Canon EF-S 18-55mm IS (0.25m)</li>
+                          <li className="flex items-start gap-2"><span className="text-[#5a6d78] mt-0.5">•</span>Canon RF 75-300mm F4-5.6</li>
+                          <li className="flex items-start gap-2"><span className="text-[#5a6d78] mt-0.5">•</span>Macro lens capability</li>
                         </ul>
                       </div>
                     </div>
@@ -624,23 +651,23 @@ export default function Home() {
                       ))}
                     </div>
 
-                    <div className="mt-12 grid gap-6 md:grid-cols-2">
-                      <div className="rounded-2xl border border-neutral-200 bg-card p-6 hover:border-[#5a6d78] hover:shadow-md transition-all duration-300">
-                        <h4 className="text-lg font-medium text-primary">Edit Options</h4>
-                        <div className="mt-4 space-y-4 text-sm">
+                    <div className="mt-8 grid gap-4 md:grid-cols-2">
+                      <div className="rounded-2xl border border-neutral-200 bg-card p-4 hover:border-[#5a6d78] hover:shadow-md transition-all duration-300">
+                        <h4 className="text-base font-medium text-primary">Edit Options</h4>
+                        <div className="mt-3 space-y-2 text-sm">
                           <div>
                             <p className="font-medium text-primary">Basic Edit — included</p>
-                            <p className="text-secondary">Clean cut, music, colour correction</p>
+                            <p className="text-secondary text-xs">Clean cut, music, colour correction</p>
                           </div>
                           <div>
                             <p className="font-medium text-primary">Premium Edit — <span className="text-[#5a6d78]">+£200</span></p>
-                            <p className="text-secondary">Cinematic pacing, advanced colour grade, sound design, social-ready master</p>
+                            <p className="text-secondary text-xs">Cinematic pacing, advanced colour grade, sound design, social-ready master</p>
                           </div>
                         </div>
                       </div>
-                      <div className="rounded-2xl border border-neutral-200 bg-card p-6 hover:border-[#5a6d78] hover:shadow-md transition-all duration-300">
-                        <h4 className="text-lg font-medium text-primary">Global Add-ons</h4>
-                        <ul className="mt-4 space-y-2 text-sm text-secondary list-disc pl-4">
+                      <div className="rounded-2xl border border-neutral-200 bg-card p-4 hover:border-[#5a6d78] hover:shadow-md transition-all duration-300">
+                        <h4 className="text-base font-medium text-primary">Global Add-ons</h4>
+                        <ul className="mt-3 space-y-1 text-sm text-secondary list-disc pl-4">
                           <li>Interior drone footage — <span className="text-[#5a6d78] font-medium">+£120</span></li>
                           <li>FPV sequences (non-automotive) — <span className="text-[#5a6d78] font-medium">+£250</span></li>
                           <li>Sunrise / sunset shoot — <span className="text-[#5a6d78] font-medium">+£150</span></li>
@@ -650,9 +677,9 @@ export default function Home() {
                         </ul>
                       </div>
                     </div>
-                    <div className="mt-6 rounded-2xl border border-neutral-200 bg-card p-6 hover:border-[#5a6d78] hover:shadow-md transition-all duration-300">
-                      <h4 className="text-lg font-medium text-primary">Multi-drone setups</h4>
-                      <p className="mt-2 text-sm text-secondary">Quoted per job.</p>
+                    <div className="mt-4 rounded-2xl border border-neutral-200 bg-card p-4 hover:border-[#5a6d78] hover:shadow-md transition-all duration-300">
+                      <h4 className="text-base font-medium text-primary">Multi-drone setups</h4>
+                      <p className="mt-1 text-sm text-secondary">Quoted per job.</p>
                     </div>
                     </div>
                   </section>

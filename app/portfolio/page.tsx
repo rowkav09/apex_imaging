@@ -90,9 +90,10 @@ export default function PortfolioPage() {
           left: 0;
           width: 100%;
           height: 100%;
-          background: radial-gradient(120% 120% at 20% 0%, rgba(98, 180, 135, 0.45) 0%, rgba(12, 22, 16, 0.98) 45%),
-            radial-gradient(140% 140% at 80% 10%, rgba(60, 120, 95, 0.55) 0%, rgba(12, 22, 16, 0.98) 55%),
-            linear-gradient(135deg, rgba(24, 44, 32, 0.7), rgba(10, 20, 14, 0.9));
+          background: 
+            radial-gradient(ellipse at 20% 0%, rgba(90, 109, 120, 0.15) 0%, transparent 50%),
+            radial-gradient(ellipse at 80% 100%, rgba(61, 90, 102, 0.12) 0%, transparent 50%),
+            linear-gradient(160deg, #dce4ea 0%, #e8eef3 30%, #f4f2ef 60%, #e8eef3 100%);
           z-index: 9999;
           display: flex;
           align-items: center;
@@ -110,8 +111,8 @@ export default function PortfolioPage() {
         .loader-spinner {
           width: 32px;
           height: 32px;
-          border: 2px solid rgba(98, 180, 135, 0.2);
-          border-top-color: rgba(98, 180, 135, 0.8);
+          border: 2px solid rgba(90, 109, 120, 0.2);
+          border-top-color: rgba(90, 109, 120, 0.8);
           border-radius: 50%;
           animation: spin 0.8s linear infinite;
         }
@@ -126,61 +127,49 @@ export default function PortfolioPage() {
           font-weight: 300;
           font-size: 15px;
           line-height: 1.6;
-          color: #e9f7ef;
+          color: #3d5a66;
           height: 100vh;
           margin: 0;
-          background: radial-gradient(120% 120% at 20% 0%, rgba(98, 180, 135, 0.45) 0%, rgba(12, 22, 16, 0.98) 45%),
-            radial-gradient(140% 140% at 80% 10%, rgba(60, 120, 95, 0.55) 0%, rgba(12, 22, 16, 0.98) 55%),
-            linear-gradient(135deg, rgba(24, 44, 32, 0.7), rgba(10, 20, 14, 0.9));
-          background-size: 160% 160%;
-          animation: ambientShift 18s ease-in-out infinite;
+          background: 
+            radial-gradient(ellipse at 20% 0%, rgba(90, 109, 120, 0.15) 0%, transparent 50%),
+            radial-gradient(ellipse at 80% 100%, rgba(61, 90, 102, 0.12) 0%, transparent 50%),
+            linear-gradient(160deg, #dce4ea 0%, #e8eef3 30%, #f4f2ef 60%, #e8eef3 100%);
+          background-attachment: fixed;
           overflow: hidden;
-          transition: all 300ms linear;
-          perspective: 800px;
-        }
-
-        @keyframes ambientShift {
-          0% {
-            background-position: 0% 0%, 100% 0%, 0% 0%;
-          }
-          50% {
-            background-position: 80% 40%, 20% 60%, 0% 0%;
-          }
-          100% {
-            background-position: 0% 0%, 100% 0%, 0% 0%;
-          }
+          transition: background 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+          perspective: 1000px;
         }
 
         body.fpv-on {
-          background: radial-gradient(140% 120% at 15% 10%, rgba(120, 190, 145, 0.6) 0%, rgba(10, 20, 14, 0.98) 45%),
-            radial-gradient(140% 120% at 85% 20%, rgba(60, 140, 105, 0.55) 0%, rgba(10, 20, 14, 0.98) 55%),
-            linear-gradient(135deg, rgba(22, 42, 30, 0.75), rgba(10, 20, 14, 0.9));
-          background-size: 160% 160%;
-          animation: ambientShift 14s ease-in-out infinite;
+          background: 
+            radial-gradient(ellipse at 30% 20%, rgba(122, 154, 168, 0.4) 0%, transparent 50%),
+            radial-gradient(ellipse at 70% 80%, rgba(61, 90, 102, 0.3) 0%, transparent 50%),
+            linear-gradient(135deg, #4a5d68 0%, #3d5a66 50%, #2d4a56 100%);
+          background-attachment: fixed;
         }
 
         body.cinematic-on {
-          background: radial-gradient(140% 120% at 20% 0%, rgba(110, 185, 140, 0.6) 0%, rgba(9, 18, 13, 0.98) 45%),
-            radial-gradient(140% 120% at 90% 20%, rgba(55, 125, 95, 0.6) 0%, rgba(9, 18, 13, 0.98) 55%),
-            linear-gradient(135deg, rgba(18, 36, 26, 0.75), rgba(9, 18, 13, 0.9));
-          background-size: 160% 160%;
-          animation: ambientShift 16s ease-in-out infinite;
+          background: 
+            radial-gradient(ellipse at 20% 30%, rgba(122, 154, 168, 0.35) 0%, transparent 50%),
+            radial-gradient(ellipse at 80% 70%, rgba(61, 90, 102, 0.25) 0%, transparent 50%),
+            linear-gradient(145deg, #3d5a66 0%, #2d4a56 50%, #1d3a46 100%);
+          background-attachment: fixed;
         }
 
         body.neo1-on {
-          background: radial-gradient(140% 120% at 20% 0%, rgba(125, 200, 150, 0.55) 0%, rgba(10, 22, 16, 0.98) 45%),
-            radial-gradient(120% 120% at 80% 30%, rgba(70, 140, 110, 0.55) 0%, rgba(10, 22, 16, 0.98) 55%),
-            linear-gradient(135deg, rgba(20, 40, 30, 0.75), rgba(10, 22, 16, 0.9));
-          background-size: 160% 160%;
-          animation: ambientShift 18s ease-in-out infinite;
+          background: 
+            radial-gradient(ellipse at 40% 10%, rgba(122, 154, 168, 0.35) 0%, transparent 50%),
+            radial-gradient(ellipse at 60% 90%, rgba(61, 90, 102, 0.25) 0%, transparent 50%),
+            linear-gradient(155deg, #5a6d78 0%, #3d5a66 50%, #2d4a56 100%);
+          background-attachment: fixed;
         }
 
         body.camera-on {
-          background: radial-gradient(140% 120% at 25% 0%, rgba(110, 185, 145, 0.55) 0%, rgba(9, 19, 14, 0.98) 45%),
-            radial-gradient(140% 120% at 85% 25%, rgba(55, 130, 100, 0.55) 0%, rgba(9, 19, 14, 0.98) 55%),
-            linear-gradient(135deg, rgba(18, 36, 26, 0.75), rgba(9, 19, 14, 0.9));
-          background-size: 160% 160%;
-          animation: ambientShift 16s ease-in-out infinite;
+          background: 
+            radial-gradient(ellipse at 25% 25%, rgba(122, 154, 168, 0.35) 0%, transparent 50%),
+            radial-gradient(ellipse at 75% 75%, rgba(61, 90, 102, 0.25) 0%, transparent 50%),
+            linear-gradient(140deg, #4a5d68 0%, #3d5a66 50%, #2d4a56 100%);
+          background-attachment: fixed;
         }
 
 
@@ -191,15 +180,23 @@ export default function PortfolioPage() {
           overflow: hidden;
           height: 100vh;
           background: transparent;
-          transform: scale(1) rotateX(0);
-          box-shadow: 0 0 40px rgba(0,0,0,0.2);
-          transition: all 300ms linear;
-          transition-delay: 400ms;
-          transform-origin: center top;
+          transform: scale(1) rotateX(0) translateZ(0);
+          box-shadow: 0 0 40px rgba(0,0,0,0.05);
+          transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease-out;
+          transform-origin: center center;
+        }
+
+        body.fpv-on .hero-section,
+        body.cinematic-on .hero-section,
+        body.neo1-on .hero-section,
+        body.camera-on .hero-section {
+          transform: scale(0.92) rotateX(8deg) translateZ(-100px);
+          opacity: 0;
+          pointer-events: none;
         }
 
         .hero-section h1 {
-          color: #fff;
+          color: #3d5a66;
           font-size: 8vw;
           line-height: 1;
           font-weight: 900;
@@ -207,7 +204,7 @@ export default function PortfolioPage() {
 
         .hero-section .dancing {
           letter-spacing: 1px;
-          color: #c9f2dc;
+          color: #5a6d78;
           font-size: 25px;
           line-height: 1;
           font-weight: 700;
@@ -222,14 +219,15 @@ export default function PortfolioPage() {
           padding-right: 10px;
           display: inline-block;
           border-radius: 5px;
-          background-color: #234233;
+          background-color: #5a6d78;
+          color: #fff;
         }
 
         .hero-section p {
           font-size: 20px;
           line-height: 1;
           font-weight: 700;
-          color: #c9f2dc;
+          color: #5a6d78;
         }
 
         .fpv-section p,
@@ -247,22 +245,6 @@ export default function PortfolioPage() {
           cursor: pointer;
         }
 
-        body.fpv-on .hero-section,
-        body.cinematic-on .hero-section,
-        body.neo1-on .hero-section,
-        body.camera-on .hero-section {
-          transform: rotateX(-10deg);
-          transition-delay: 0ms;
-        }
-
-        body.fpv-on .hero-section,
-        body.cinematic-on .hero-section,
-        body.neo1-on .hero-section,
-        body.camera-on .hero-section {
-          opacity: 0;
-          pointer-events: none;
-        }
-
         .fpv-section,
         .cinematic-section,
         .neo1-section,
@@ -275,9 +257,22 @@ export default function PortfolioPage() {
           display: block;
           overflow: hidden;
           background-color: transparent;
-          backdrop-filter: blur(0.5px);
-          transition: all 300ms linear;
+          backdrop-filter: blur(0px);
+          transition: 
+            top 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+            opacity 0.4s ease-out,
+            backdrop-filter 0.5s ease-out;
           z-index: 10;
+          opacity: 0;
+        }
+
+        body.fpv-on .fpv-section,
+        body.cinematic-on .cinematic-section,
+        body.neo1-on .neo1-section,
+        body.camera-on .camera-section {
+          top: 0;
+          opacity: 1;
+          backdrop-filter: blur(8px);
         }
 
         .section-content {
@@ -334,14 +329,6 @@ export default function PortfolioPage() {
           visibility: visible;
         }
 
-        body.fpv-on .fpv-section,
-        body.cinematic-on .cinematic-section,
-        body.neo1-on .neo1-section,
-        body.camera-on .camera-section {
-          top: 0;
-          transition-delay: 400ms;
-        }
-
         .fpv-section img,
         .cinematic-section img,
         .neo1-section img,
@@ -378,6 +365,7 @@ export default function PortfolioPage() {
           line-height: 1.7;
           letter-spacing: 1px;
           font-weight: 500;
+          color: #fff;
         }
 
         .fpv-section p span,
@@ -387,7 +375,7 @@ export default function PortfolioPage() {
           font-size: 20px;
           line-height: 1.3;
           font-weight: 700;
-          color: #c9f2dc;
+          color: #e8eef3;
         }
 
         .section-center {
@@ -404,7 +392,7 @@ export default function PortfolioPage() {
           top: 30px;
           left: 30px;
           z-index: 200000;
-          color: #c9f2dc;
+          color: #5a6d78;
           font-size: 14px;
           font-weight: 600;
           text-decoration: none;
@@ -412,7 +400,63 @@ export default function PortfolioPage() {
         }
 
         .back-home:hover {
-          color: #fff;
+          color: #3d5a66;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+          .hero-section h1 {
+            font-size: 12vw;
+          }
+
+          .hero-section .dancing {
+            font-size: 16px;
+            transform: translateY(-120px) rotate(-45deg);
+          }
+
+          .hero-section p {
+            font-size: 16px;
+          }
+
+          .hero-section p span {
+            margin-left: 8px;
+            margin-right: 8px;
+            display: block;
+            margin-bottom: 12px;
+          }
+
+          .fpv-section h3,
+          .cinematic-section h3,
+          .neo1-section h3,
+          .camera-section h3 {
+            font-size: 10vw;
+          }
+
+          .fpv-close,
+          .cinematic-close,
+          .neo1-close,
+          .camera-close {
+            top: 70px;
+            right: 15px;
+            width: 40px;
+            height: 40px;
+            background-size: 28px 28px;
+          }
+
+          .section-content {
+            padding: 80px 0;
+          }
+
+          .fpv-section img,
+          .cinematic-section img,
+          .neo1-section img,
+          .camera-section img,
+          .fpv-section video,
+          .cinematic-section video,
+          .neo1-section video,
+          .camera-section video {
+            margin-top: 20px;
+          }
         }
 
         @media screen and (max-width: 1200px) {
