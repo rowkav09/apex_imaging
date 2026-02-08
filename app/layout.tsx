@@ -8,8 +8,8 @@ const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-int
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], display: "swap", variable: "--font-space-grotesk" });
 
 export const metadata: Metadata = {
-  title: "Apex Aerial Imaging | Professional Aerial Photography & Videography",
-  description: "Apex Aerial Imaging - Professional aerial photography and videography services. Capturing stunning perspectives from above with cinematic quality and natural artistry.",
+  title: "Apex Imaging | Professional Drone Cinematography",
+  description: "Apex Imaging - Professional drone cinematography services. Capturing stunning perspectives with cinematic quality and natural artistry.",
 };
 
 export default function RootLayout({

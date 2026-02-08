@@ -221,42 +221,53 @@ export default function Home() {
                 <header className="relative flex h-screen w-full items-center justify-center overflow-hidden bg-black">
                   <div className="absolute inset-0">
                     <div className="absolute inset-0 scale-[1.06]">
+                      {/* Desktop video */}
                       <video
-                        className="h-full w-full object-cover"
+                        className="hidden md:block h-full w-full object-cover"
                         autoPlay
                         muted
                         loop
                         playsInline
                         preload="metadata"
                       >
-                        <source src="/stock_footage/fall-forest-autumn.mp4" type="video/mp4" />
+                        <source src="/hero/hero.mp4" type="video/mp4" />
+                      </video>
+                      {/* Mobile video - uses same for now, add mobile version later */}
+                      <video
+                        className="md:hidden h-full w-full object-cover"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="metadata"
+                      >
+                        <source src="/hero/hero.mp4" type="video/mp4" />
                       </video>
                     </div>
                   </div>
 
-                  <div className="relative z-10 flex flex-col items-center justify-center text-center text-white">
-                    <div className="mx-auto mb-8 inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/30 px-4 py-2 text-glow-soft backdrop-blur-sm">
-                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-                      <span className="font-mono text-[10px] uppercase tracking-[0.3em]">London & UK Wide</span>
+                  <div className="relative z-10 flex flex-col items-center justify-center text-center text-white px-6">
+                    <div className="mb-6 md:mb-8">
+                      <span className="font-mono text-xs uppercase tracking-[0.35em] text-[#a8c4d4]">00 — Welcome</span>
                     </div>
-                    <h1 className="flex flex-col items-center font-display text-[13vw] leading-[0.8] tracking-tight md:text-[8vw] text-glow">
+                    <h1 className="flex flex-col items-center font-display text-[15vw] leading-[0.85] tracking-tight md:text-[10vw] text-glow">
                         <span className="drop-shadow-xl">APEX</span>
                         <span className="relative" style={{ 
-                          backgroundImage: 'linear-gradient(135deg, #1f8a5b 0%, #2f9b6c 40%, #3a8f62 70%, #2b6b4d 100%)',
+                          backgroundImage: 'linear-gradient(135deg, #5a7a8a 0%, #7a9aa8 40%, #8eb4c2 70%, #6a8a98 100%)',
                           backgroundClip: 'text',
                           WebkitBackgroundClip: 'text',
                           WebkitTextFillColor: 'transparent',
                           textShadow: 'none',
                           letterSpacing: 'inherit',
                           filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.2))'
-                        }}>AERIAL IMAGING</span>
+                        }}>IMAGING</span>
                       </h1>
-                      <p className="mx-auto mt-8 max-w-2xl font-mono text-xs uppercase tracking-[0.3em] text-white/85 text-glow-soft">
-                        Cinema-grade aerial optics, architectural storytelling, and smooth FPV choreography.
+                      <p className="mx-auto mt-6 md:mt-8 max-w-xl text-sm md:text-base text-white/80">
+                        Aerial cinematography for real estate, automotive, tourism, construction, events, and marine.
                       </p>
                   </div>
 
-                  <div className="absolute bottom-10 left-6 z-10 flex flex-col gap-1 text-white">
+                  <div className="absolute bottom-6 md:bottom-10 left-6 z-10 hidden md:flex flex-col gap-1 text-white">
                     <div className="flex items-center gap-2 text-xs font-mono tracking-[0.25em]">
                       <span>51.5074° N</span>
                       <span className="h-px w-6 bg-white/40" />
@@ -267,311 +278,66 @@ export default function Home() {
                 </header>
 
                 <main className="wrapper relative z-10 bg-bg">
-                  <section className="px-6 py-24 md:px-12 lg:px-24">
-                    <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-20">
-                      <div className="lg:col-span-4 flex flex-col justify-between border-t border-border pt-6">
-                        <span className="font-mono text-xs uppercase tracking-[0.35em] text-secondary">01 — Manifesto</span>
-                        <div className="mt-10 hidden lg:block text-secondary">※</div>
+                  <section className="px-6 py-20 md:py-24 md:px-12 lg:px-24 bg-[#5a6d78]">
+                    <div className="max-w-7xl mx-auto">
+                      <div className="mb-10 md:mb-12">
+                        <span className="font-mono text-xs uppercase tracking-[0.35em] text-[#a8c4d4]">01 — Manifesto</span>
+                        <h2 className="mt-4 font-display text-3xl leading-[1.1] tracking-tight text-white md:text-5xl lg:text-6xl">Our Vision</h2>
                       </div>
-                      <div className="lg:col-span-8 space-y-8">
-                        <h2 className="font-display text-4xl leading-[1.05] tracking-tight text-primary md:text-5xl lg:text-6xl">
-                          We create aerial stories across property, automotive, commercial, tourism, construction, events, and marine.
-                          <span className="italic text-secondary"> Cinematic drone coverage </span>
+                      <div className="space-y-8">
+                        <p className="font-display text-xl leading-[1.3] text-white/90 md:text-2xl lg:text-3xl max-w-4xl">
+                          We create aerial stories across real estate, automotive, tourism, construction, events, and marine.
+                          <span className="italic text-[#a8c4d4]"> Cinematic drone coverage </span>
                           that makes every project feel intentional and premium.
-                        </h2>
-                        <div className="grid grid-cols-2 gap-8 md:grid-cols-3">
-                          <div className="space-y-2">
-                            <span className="text-sm font-medium text-primary">Real Estate</span>
-                            <p className="text-xs text-secondary">Exteriors, neighborhoods, and luxury listings.</p>
+                        </p>
+                        <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:gap-8 pt-6 border-t border-white/20">
+                          <div className="space-y-1">
+                            <span className="text-sm font-medium text-white">Real Estate</span>
+                            <p className="text-xs text-white/60">Interiors, exteriors, neighbourhood context, and luxury listings.</p>
                           </div>
-                          <div className="space-y-2">
-                            <span className="text-sm font-medium text-primary">Automotive</span>
-                            <p className="text-xs text-secondary">FPV chase, rolling shots, and hero passes.</p>
+                          <div className="space-y-1">
+                            <span className="text-sm font-medium text-white">Automotive</span>
+                            <p className="text-xs text-white/60">FPV chase sequences, rolling shots, and hero passes.</p>
                           </div>
-                          <div className="space-y-2">
-                            <span className="text-sm font-medium text-primary">Commercial & Brand</span>
-                            <p className="text-xs text-secondary">Campaign visuals and social-ready promos.</p>
+                          <div className="space-y-1">
+                            <span className="text-sm font-medium text-white">Tourism & Hospitality</span>
+                            <p className="text-xs text-white/60">Resorts, interiors, venues, and destination highlights.</p>
                           </div>
-                          <div className="space-y-2">
-                            <span className="text-sm font-medium text-primary">Tourism & Hospitality</span>
-                            <p className="text-xs text-secondary">Resorts, venues, and destination highlights.</p>
+                          <div className="space-y-1">
+                            <span className="text-sm font-medium text-white">Construction</span>
+                            <p className="text-xs text-white/60">Progress tracking, site context, and project timelines.</p>
                           </div>
-                          <div className="space-y-2">
-                            <span className="text-sm font-medium text-primary">Construction</span>
-                            <p className="text-xs text-secondary">Progress capture, site context, and timelines.</p>
+                          <div className="space-y-1">
+                            <span className="text-sm font-medium text-white">Events</span>
+                            <p className="text-xs text-white/60">Cinematic event films and highlight edits.</p>
                           </div>
-                          <div className="space-y-2">
-                            <span className="text-sm font-medium text-primary">Events & Marine</span>
-                            <p className="text-xs text-secondary">Live coverage, yachts, and coastal visuals.</p>
+                          <div className="space-y-1">
+                            <span className="text-sm font-medium text-white">Marine</span>
+                            <p className="text-xs text-white/60">Yachts, marinas, and coastal visuals.</p>
                           </div>
                         </div>
                       </div>
                     </div>
                   </section>
 
-                  <section className="py-12 border-y border-white/10 bg-black/20 overflow-hidden relative">
-                    <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-bg to-transparent z-10"></div>
-                    <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-bg to-transparent z-10"></div>
-                    
-                    <div className="flex w-max animate-marquee items-center">
-                      <div className="flex gap-20 px-10 text-neutral-500 font-medium tracking-widest text-sm uppercase">
-                        <span>Real Estate</span>
-                        <span>Automotive</span>
-                        <span>Commercial</span>
-                        <span>Tourism</span>
-                        <span>Construction</span>
-                        <span>Events</span>
-                        <span>Marine</span>
-                        <span>FPV</span>
-                        <span>Real Estate</span>
-                        <span>Automotive</span>
-                        <span>Commercial</span>
-                        <span>Tourism</span>
-                      </div>
-                      <div className="flex gap-20 px-10 text-neutral-500 font-medium tracking-widest text-sm uppercase">
-                        <span>Construction</span>
-                        <span>Events</span>
-                        <span>Marine</span>
-                        <span>FPV</span>
-                        <span>Real Estate</span>
-                        <span>Automotive</span>
-                        <span>Commercial</span>
-                        <span>Tourism</span>
-                        <span>Construction</span>
-                        <span>Events</span>
-                        <span>Marine</span>
-                        <span>FPV</span>
-                      </div>
-                    </div>
-                  </section>
-
-                  <section id="drone-services" className="relative px-6 py-24 md:px-12 lg:px-24 bg-bg">
-                    <div className="mb-14 text-center max-w-4xl mx-auto">
-                      <span className="font-mono text-xs uppercase tracking-[0.35em] text-secondary">Drone & Hourly Pricing</span>
-                      <h2 className="mt-4 font-display text-4xl md:text-5xl lg:text-6xl tracking-tight text-primary">Three Drone Types</h2>
-                      <p className="mt-6 text-base text-secondary leading-relaxed">Clear hourly pricing for the right platform.</p>
-                    </div>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto justify-items-center">
-                      {/* Mini Drone */}
-                      <div className="relative hover:bg-white/[0.04] transition-all duration-300 group rounded-2xl pt-6 pr-6 pb-6 pl-6 w-full" style={{ maxWidth: "22rem", backgroundColor: "hsla(155, 20%, 8%, 1)", backgroundImage: "radial-gradient(at 88% 40%, hsla(155, 20%, 8%, 1) 0px, transparent 85%), radial-gradient(at 49% 30%, hsla(155, 20%, 8%, 1) 0px, transparent 85%), radial-gradient(at 14% 26%, hsla(155, 20%, 8%, 1) 0px, transparent 85%), radial-gradient(at 0% 64%, hsla(150, 65%, 40%, 1) 0px, transparent 85%), radial-gradient(at 41% 94%, hsla(150, 55%, 55%, 1) 0px, transparent 85%), radial-gradient(at 100% 99%, hsla(145, 60%, 35%, 1) 0px, transparent 85%)", boxShadow: "0px -16px 24px 0px rgba(255, 255, 255, 0.18) inset" }}>
-                        <div style={{ overflow: "hidden", pointerEvents: "none", position: "absolute", zIndex: -10, top: "50%", left: "50%", transform: "translate(-50%, -50%)", width: "calc(100% + 2px)", height: "calc(100% + 2px)", backgroundImage: "linear-gradient(0deg, hsl(0, 0%, 100%) -50%, hsl(0, 0%, 40%) 100%)", borderRadius: "1rem" }}>
-                          <div style={{ content: "", pointerEvents: "none", position: "fixed", zIndex: 200, top: "50%", left: "50%", transform: "translate(-50%, -50%) rotate(0deg)", transformOrigin: "left", width: "200%", height: "10rem", backgroundImage: "linear-gradient(0deg, hsla(0, 0%, 100%, 0) 0%, hsl(150, 55%, 45%) 40%, hsl(150, 55%, 45%) 60%, hsla(0, 0%, 40%, 0) 100%)", animation: "rotate 8s linear infinite" }}></div>
-                        </div>
-                        
-                        <style>{`@keyframes rotate { to { transform: translate(-50%, -50%) rotate(360deg); } }`}</style>
-
-                        <div className="mb-6">
-                          <h3 className="text-xl font-medium tracking-tight text-white">Mini</h3>
-                          <p className="text-xs text-neutral-500">Indoor / tight spaces</p>
-                        </div>
-
-                        <div className="mb-6">
-                          <p className="text-sm text-neutral-300 mb-3">Safe, compact footage for interiors</p>
-                          <p className="text-xs text-neutral-500">Homes • Venues • Tight fly-throughs</p>
-                        </div>
-
-                        <div className="mb-6">
-                          <div className="flex items-baseline gap-2">
-                            <span className="text-2xl font-semibold tracking-tight text-white">£100/hr</span>
-                          </div>
-                          <p className="text-xs text-neutral-500 mt-1">Per hour</p>
-                        </div>
-
-                        <ul className="space-y-3 text-sm text-neutral-300 list-disc pl-5">
-                          <li>Indoor-safe platform</li>
-                          <li>Stable close-proximity movement</li>
-                          <li>Ideal for interior reveals</li>
-                        </ul>
-                      </div>
-
-                      {/* Mavic Drone */}
-                      <div className="relative hover:bg-white/[0.04] transition-all duration-300 group rounded-2xl pt-6 pr-6 pb-6 pl-6 w-full" style={{ maxWidth: "22rem", backgroundColor: "hsla(155, 20%, 8%, 1)", backgroundImage: "radial-gradient(at 88% 40%, hsla(155, 20%, 8%, 1) 0px, transparent 85%), radial-gradient(at 49% 30%, hsla(155, 20%, 8%, 1) 0px, transparent 85%), radial-gradient(at 14% 26%, hsla(155, 20%, 8%, 1) 0px, transparent 85%), radial-gradient(at 0% 64%, hsla(150, 65%, 40%, 1) 0px, transparent 85%), radial-gradient(at 41% 94%, hsla(150, 55%, 55%, 1) 0px, transparent 85%), radial-gradient(at 100% 99%, hsla(145, 60%, 35%, 1) 0px, transparent 85%)", boxShadow: "0px -16px 24px 0px rgba(255, 255, 255, 0.18) inset" }}>
-                        <div style={{ overflow: "hidden", pointerEvents: "none", position: "absolute", zIndex: -10, top: "50%", left: "50%", transform: "translate(-50%, -50%)", width: "calc(100% + 2px)", height: "calc(100% + 2px)", backgroundImage: "linear-gradient(0deg, hsl(0, 0%, 100%) -50%, hsl(0, 0%, 40%) 100%)", borderRadius: "1rem" }}>
-                          <div style={{ content: "", pointerEvents: "none", position: "fixed", zIndex: 200, top: "50%", left: "50%", transform: "translate(-50%, -50%) rotate(0deg)", transformOrigin: "left", width: "200%", height: "10rem", backgroundImage: "linear-gradient(0deg, hsla(0, 0%, 100%, 0) 0%, hsl(150, 55%, 45%) 40%, hsl(150, 55%, 45%) 60%, hsla(0, 0%, 40%, 0) 100%)", animation: "rotate 8s linear infinite" }}></div>
-                        </div>
-
-                        <div className="mb-6">
-                          <h3 className="text-xl font-medium tracking-tight text-white">Mavic</h3>
-                          <p className="text-xs text-neutral-500">Cinematic / general aerial</p>
-                        </div>
-
-                        <div className="mb-6">
-                          <p className="text-sm text-neutral-300 mb-3">Clean, cinematic establishing shots</p>
-                          <p className="text-xs text-neutral-500">Property • Tourism • Commercial</p>
-                        </div>
-
-                        <div className="mb-6">
-                          <div className="flex items-baseline gap-2">
-                            <span className="text-2xl font-semibold tracking-tight text-white">£150/hr</span>
-                          </div>
-                          <p className="text-xs text-neutral-500 mt-1">Per hour</p>
-                        </div>
-
-                        <ul className="space-y-3 text-sm text-neutral-300 list-disc pl-5">
-                          <li>4K capture depending on camera</li>
-                          <li>3-axis gimbal stabilization</li>
-                          <li>Log profiles and grade-ready files</li>
-                        </ul>
-                      </div>
-
-                      {/* FPV Drone */}
-                      <div className="relative hover:bg-white/[0.04] transition-all duration-300 group rounded-2xl pt-6 pr-6 pb-6 pl-6 w-full" style={{ maxWidth: "22rem", backgroundColor: "hsla(155, 20%, 8%, 1)", backgroundImage: "radial-gradient(at 88% 40%, hsla(155, 20%, 8%, 1) 0px, transparent 85%), radial-gradient(at 49% 30%, hsla(155, 20%, 8%, 1) 0px, transparent 85%), radial-gradient(at 14% 26%, hsla(155, 20%, 8%, 1) 0px, transparent 85%), radial-gradient(at 0% 64%, hsla(150, 65%, 40%, 1) 0px, transparent 85%), radial-gradient(at 41% 94%, hsla(150, 55%, 55%, 1) 0px, transparent 85%), radial-gradient(at 100% 99%, hsla(145, 60%, 35%, 1) 0px, transparent 85%)", boxShadow: "0px -16px 24px 0px rgba(255, 255, 255, 0.18) inset" }}>
-                        <div style={{ overflow: "hidden", pointerEvents: "none", position: "absolute", zIndex: -10, top: "50%", left: "50%", transform: "translate(-50%, -50%)", width: "calc(100% + 2px)", height: "calc(100% + 2px)", backgroundImage: "linear-gradient(0deg, hsl(0, 0%, 100%) -50%, hsl(0, 0%, 40%) 100%)", borderRadius: "1rem" }}>
-                          <div style={{ content: "", pointerEvents: "none", position: "fixed", zIndex: 200, top: "50%", left: "50%", transform: "translate(-50%, -50%) rotate(0deg)", transformOrigin: "left", width: "200%", height: "10rem", backgroundImage: "linear-gradient(0deg, hsla(0, 0%, 100%, 0) 0%, hsl(150, 55%, 45%) 40%, hsl(150, 55%, 45%) 60%, hsla(0, 0%, 40%, 0) 100%)", animation: "rotate 8s linear infinite" }}></div>
-                        </div>
-
-                        <div className="mb-6">
-                          <h3 className="text-xl font-medium tracking-tight text-white">FPV</h3>
-                          <p className="text-xs text-neutral-500">High-risk / specialist</p>
-                        </div>
-
-                        <div className="mb-6">
-                          <p className="text-sm text-neutral-300 mb-3">Aggressive movement and close passes</p>
-                          <p className="text-xs text-neutral-500">Automotive • Action • Complex paths</p>
-                        </div>
-
-                        <div className="mb-6">
-                          <div className="flex items-baseline gap-2">
-                            <span className="text-2xl font-semibold tracking-tight text-white">£220/hr</span>
-                          </div>
-                          <p className="text-xs text-neutral-500 mt-1">Per hour</p>
-                        </div>
-
-                        <ul className="space-y-3 text-sm text-neutral-300 list-disc pl-5">
-                          <li>High-speed tracking and dynamic transitions</li>
-                          <li>Close-proximity FPV chase</li>
-                          <li>Specialist operation</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </section>
-
-                  <section className="px-6 pb-24 md:px-12 lg:px-24">
-                    <div className="mb-10 flex items-end justify-between gap-6">
-                      <div>
-                        <span className="font-mono text-xs uppercase tracking-[0.35em] text-secondary">APEX Packages & Pricing</span>
-                        <h3 className="mt-4 font-display text-3xl md:text-4xl tracking-tight text-primary">Packages by project type</h3>
-                      </div>
-                      <span className="text-secondary text-sm">Swipe to explore</span>
-                    </div>
-
-                    <div className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory">
-                      {[
-                        {
-                          title: "Real Estate",
-                          price: "Starting from £450",
-                          lines: ["Exterior aerials", "Property context", "Edit: Basic or Premium"],
-                          accent: "from-emerald-500/20 to-teal-500/10",
-                        },
-                        {
-                          title: "Automotive - Cinematic Aerial",
-                          price: "Starting from £650",
-                          lines: ["Rolling shots", "Hero passes", "Edit: Basic or Premium"],
-                          accent: "from-green-500/20 to-emerald-500/10",
-                        },
-                        {
-                          title: "Automotive - FPV Chase",
-                          price: "Starting from £900",
-                          lines: ["Close-proximity FPV chase", "Dynamic passes", "Edit: Basic or Premium"],
-                          accent: "from-teal-500/20 to-emerald-500/10",
-                        },
-                        {
-                          title: "Tourism & Hospitality",
-                          price: "Starting from £600",
-                          lines: ["Exterior flyovers", "Location context", "Edit: Basic or Premium"],
-                          accent: "from-emerald-400/20 to-lime-500/10",
-                        },
-                        {
-                          title: "Construction",
-                          price: "Starting from £450",
-                          lines: ["Site overview", "Progress documentation", "Edit: Basic or Premium"],
-                          accent: "from-emerald-600/20 to-teal-500/10",
-                        },
-                        {
-                          title: "Construction Add-ons",
-                          price: "Add-on services",
-                          lines: ["Scheduled repeat visits", "Annotated footage", "Raw archive delivery"],
-                          accent: "from-emerald-600/15 to-teal-500/10",
-                        },
-                        {
-                          title: "Events (Non-live)",
-                          price: "Starting from £550",
-                          lines: ["Planned venue coverage", "Edit: Basic or Premium"],
-                          accent: "from-green-400/20 to-teal-500/10",
-                        },
-                        {
-                          title: "Marine",
-                          price: "Starting from £700",
-                          lines: ["Yacht / marina flyarounds", "Edit: Basic or Premium"],
-                          accent: "from-teal-500/20 to-cyan-500/10",
-                        },
-                      ].map((item) => (
-                        <div
-                          key={item.title}
-                          className={`min-w-[260px] snap-center rounded-2xl border border-white/10 bg-gradient-to-br ${item.accent} p-6 text-white shadow-[0_12px_40px_rgba(0,0,0,0.25)]`}
-                        >
-                          <h4 className="text-xl font-medium tracking-tight">{item.title}</h4>
-                          <p className="mt-2 text-sm text-white/70">{item.price}</p>
-                          <ul className="mt-4 space-y-2 text-xs text-white/75 list-disc pl-4">
-                            {item.lines.map((line) => (
-                              <li key={line}>{line}</li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="mt-12 grid gap-8 md:grid-cols-2">
-                      <div className="rounded-2xl border border-border bg-card p-6">
-                        <h4 className="text-lg font-medium text-primary">Edit Options</h4>
-                        <div className="mt-4 space-y-4 text-sm text-secondary">
-                          <div>
-                            <p className="font-medium text-primary">Basic Edit - included</p>
-                            <p>Clean cut, music, colour correction</p>
-                          </div>
-                          <div>
-                            <p className="font-medium text-primary">Premium Edit - +£200</p>
-                            <p>Cinematic pacing, advanced colour grade, sound design, social-ready master</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="rounded-2xl border border-border bg-card p-6">
-                        <h4 className="text-lg font-medium text-primary">Global Add-ons</h4>
-                        <ul className="mt-4 space-y-2 text-sm text-secondary list-disc pl-4">
-                          <li>Interior drone footage - +£120</li>
-                          <li>FPV sequences (non-automotive) - +£250</li>
-                          <li>Sunrise / sunset shoot - +£150</li>
-                          <li>Multiple locations - +£100 per location</li>
-                          <li>Extended shoot time - hourly rates below</li>
-                          <li>Raw footage delivery - +£100</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="mt-8 rounded-2xl border border-border bg-card p-6">
-                      <h4 className="text-lg font-medium text-primary">Multi-drone setups</h4>
-                      <p className="mt-2 text-sm text-secondary">Quoted per job.</p>
-                    </div>
-                  </section>
-
-                  <section id="portfolio" className="relative px-6 py-32 md:px-12 lg:px-24 overflow-hidden bg-gradient-to-b from-[#0f1a14] via-[#111c16] to-[#0f1411] w-full">
+                  {/* Featured Work - moved up */}
+                  <section id="portfolio" className="relative px-6 py-20 md:py-24 md:px-12 lg:px-24 overflow-hidden bg-[#f4f2ef] w-full">
                     <div className="relative mx-auto max-w-7xl">
-                      <div className="mb-16 reveal" style={{ transitionDelay: "0ms" }}>
-                        <span className="font-mono text-xs uppercase tracking-[0.35em] text-emerald-300">Portfolio</span>
-                        <h2 className="mt-4 font-display text-5xl tracking-tight text-white md:text-6xl lg:text-7xl">Featured Work</h2>
-                        <p className="mt-6 max-w-3xl text-base text-emerald-50 leading-relaxed">From serene landscapes to towering structures, each project showcases our mastery of aerial cinematography and precision documentation.</p>
+                      <div className="mb-10 md:mb-12">
+                        <span className="font-mono text-xs uppercase tracking-[0.35em] text-[#5a6d78]">02 — Portfolio</span>
+                        <h2 className="mt-4 font-display text-3xl tracking-tight text-[#3d5a66] md:text-5xl lg:text-6xl">Featured Work</h2>
+                        <p className="mt-4 max-w-2xl text-sm text-[#5a6d78] leading-relaxed">From serene landscapes to towering structures, each project showcases our mastery of aerial cinematography.</p>
                       </div>
 
-                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                         {projects.map((project, idx) => (
                           <div 
                             key={project.title} 
-                            className="group reveal relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-500"
-                            style={{ transitionDelay: `${idx * 100}ms` }}
+                            className="group relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-lg"
                           >
                             <div className="absolute inset-0 bg-neutral-800">
                               <video
-                                className="h-full w-full object-cover transition-transform duration-[2000ms] ease-out group-hover:scale-105"
+                                className="h-full w-full object-cover"
                                 autoPlay
                                 muted
                                 loop
@@ -581,38 +347,331 @@ export default function Home() {
                                 <source src={project.video} type="video/mp4" />
                               </video>
                             </div>
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-500" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
                             
-                            <div className="absolute inset-0 p-6 flex flex-col justify-end transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-                              <div className="flex items-center gap-2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                <span className="px-2 py-0.5 rounded text-[10px] font-medium bg-emerald-400 text-black uppercase tracking-wide">{project.tag}</span>
-                              </div>
-                              <h3 className="text-xl md:text-2xl font-medium text-white tracking-tight mb-2">{project.title}</h3>
-                              <p className="text-xs text-white/70">{project.location}</p>
+                            <div className="absolute inset-0 p-5 flex flex-col justify-end">
+                              <span className="px-2 py-0.5 rounded text-[9px] font-medium bg-[#7a9aa8] text-white uppercase tracking-wide w-fit mb-2">{project.tag}</span>
+                              <h3 className="text-lg font-medium text-white tracking-tight">{project.title}</h3>
+                              <p className="text-xs text-white/60 mt-1">{project.location}</p>
                             </div>
-
-                            <button className="hidden md:flex absolute top-4 right-4 h-10 w-10 rounded-full bg-white/10 backdrop-blur items-center justify-center text-white border border-white/20 opacity-0 group-hover:opacity-100 hover:bg-white hover:text-black transition-all duration-300">
-                              <span>→</span>
-                            </button>
                           </div>
                         ))}
                       </div>
                     </div>
                   </section>
 
-                  <section className="px-6 py-24 md:px-12 lg:px-24">
-                    <div className="mb-14 flex flex-col items-start justify-between gap-6 border-b border-border pb-8 md:flex-row md:items-end">
-                      <h3 className="font-display text-4xl leading-tight md:text-5xl">Aerial highlights from recent flights.</h3>
-                      <span className="text-secondary">Client-ready selects from our cinematic drone work.</span>
+                  <section className="py-10 bg-[#5a6d78] overflow-hidden relative">
+                    <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#5a6d78] to-transparent z-10"></div>
+                    <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#5a6d78] to-transparent z-10"></div>
+                    
+                    <div className="flex w-max animate-marquee items-center">
+                      <div className="flex gap-20 px-10 text-white/60 font-medium tracking-widest text-sm uppercase">
+                        <span>Real Estate</span>
+                        <span>Automotive</span>
+                        <span>Tourism</span>
+                        <span>Construction</span>
+                        <span>Events</span>
+                        <span>Marine</span>
+                        <span>Real Estate</span>
+                        <span>Automotive</span>
+                        <span>Tourism</span>
+                        <span>Construction</span>
+                      </div>
+                      <div className="flex gap-20 px-10 text-white/60 font-medium tracking-widest text-sm uppercase">
+                        <span>Events</span>
+                        <span>Marine</span>
+                        <span>Real Estate</span>
+                        <span>Automotive</span>
+                        <span>Tourism</span>
+                        <span>Construction</span>
+                        <span>Events</span>
+                        <span>Marine</span>
+                        <span>Real Estate</span>
+                        <span>Automotive</span>
+                      </div>
                     </div>
-                    <div className="grid h-[55vh] grid-cols-2 gap-4 md:grid-cols-4">
+                  </section>
+
+                  <section id="drone-services" className="relative px-6 py-20 md:py-24 md:px-12 lg:px-24 bg-[#e8eef3]">
+                    <div className="mb-10 md:mb-14 max-w-7xl mx-auto">
+                      <span className="font-mono text-xs uppercase tracking-[0.35em] text-[#5a6d78]">03 — Fleet</span>
+                      <h2 className="mt-4 font-display text-3xl md:text-5xl lg:text-6xl tracking-tight text-[#3d5a66]">Our Drones</h2>
+                      <p className="mt-4 text-sm text-[#5a6d78] leading-relaxed max-w-2xl">Clear hourly pricing for the right platform.</p>
+                    </div>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                      {/* Mini Drone - Cinematic */}
+                      <div className="rounded-2xl border border-neutral-200 bg-card p-6 hover:border-[#5a6d78] hover:shadow-lg transition-all duration-300">
+                        <div className="mb-1">
+                          <span className="text-[10px] font-medium text-[#5a6d78] uppercase tracking-wider">Cinematic</span>
+                        </div>
+                        <div className="mb-5">
+                          <h3 className="text-lg font-medium tracking-tight text-primary">DJI Mini 2 Pro</h3>
+                          <p className="text-xs text-secondary mt-1">Compact aerial platform</p>
+                        </div>
+
+                        <div className="mb-5">
+                          <p className="text-sm text-secondary mb-2">Lightweight, portable cinematography</p>
+                          <p className="text-xs text-neutral-400">Real Estate • Automotive • Events</p>
+                        </div>
+
+                        <div className="mb-5 pb-5 border-b border-neutral-100">
+                          <span className="text-2xl font-semibold tracking-tight text-[#5a6d78]">£130</span>
+                          <span className="text-sm text-secondary">/hr</span>
+                        </div>
+
+                        <ul className="space-y-2 text-sm text-secondary">
+                          <li className="flex items-start gap-2"><span className="text-[#5a6d78] mt-0.5">•</span>1/1.3″ CMOS Camera Module</li>
+                          <li className="flex items-start gap-2"><span className="text-[#5a6d78] mt-0.5">•</span>4K/60fps HDR video</li>
+                          <li className="flex items-start gap-2"><span className="text-[#5a6d78] mt-0.5">•</span>Sub-249g, no CAA restrictions</li>
+                        </ul>
+                      </div>
+
+                      {/* Mavic Drone - Cinematic */}
+                      <div className="rounded-2xl border border-neutral-200 bg-card p-6 hover:border-[#5a6d78] hover:shadow-lg transition-all duration-300">
+                        <div className="mb-1">
+                          <span className="text-[10px] font-medium text-[#5a6d78] uppercase tracking-wider">Cinematic</span>
+                        </div>
+                        <div className="mb-5">
+                          <h3 className="text-lg font-medium tracking-tight text-primary">DJI Mavic 2 Pro</h3>
+                          <p className="text-xs text-secondary mt-1">Professional aerial platform</p>
+                        </div>
+
+                        <div className="mb-5">
+                          <p className="text-sm text-secondary mb-2">Premium establishing shots & orbits</p>
+                          <p className="text-xs text-neutral-400">Real Estate • Tourism • Marine</p>
+                        </div>
+
+                        <div className="mb-5 pb-5 border-b border-neutral-100">
+                          <span className="text-2xl font-semibold tracking-tight text-[#5a6d78]">£180</span>
+                          <span className="text-sm text-secondary">/hr</span>
+                        </div>
+
+                        <ul className="space-y-2 text-sm text-secondary">
+                          <li className="flex items-start gap-2"><span className="text-[#5a6d78] mt-0.5">•</span>Hasselblad L1D-20c (1″ CMOS)</li>
+                          <li className="flex items-start gap-2"><span className="text-[#5a6d78] mt-0.5">•</span>10-bit D-Log M color</li>
+                          <li className="flex items-start gap-2"><span className="text-[#5a6d78] mt-0.5">•</span>3-axis mechanical gimbal</li>
+                        </ul>
+                      </div>
+
+                      {/* FPV Drone */}
+                      <div className="rounded-2xl border border-neutral-200 bg-card p-6 hover:border-[#5a6d78] hover:shadow-lg transition-all duration-300">
+                        <div className="mb-1">
+                          <span className="text-[10px] font-medium text-[#3d5a66] uppercase tracking-wider">FPV Specialist</span>
+                        </div>
+                        <div className="mb-5">
+                          <h3 className="text-lg font-medium tracking-tight text-primary">DJI O4 Air Unit Pro</h3>
+                          <p className="text-xs text-secondary mt-1">High-speed FPV platform</p>
+                        </div>
+
+                        <div className="mb-5">
+                          <p className="text-sm text-secondary mb-2">Dynamic chase shots & fly-throughs</p>
+                          <p className="text-xs text-neutral-400">Automotive • Action • Architecture</p>
+                        </div>
+
+                        <div className="mb-5 pb-5 border-b border-neutral-100">
+                          <span className="text-2xl font-semibold tracking-tight text-[#5a6d78]">£150</span>
+                          <span className="text-sm text-secondary">/hr</span>
+                        </div>
+
+                        <ul className="space-y-2 text-sm text-secondary">
+                          <li className="flex items-start gap-2"><span className="text-[#5a6d78] mt-0.5">•</span>O4 FPV Camera (1/1.3″ CMOS)</li>
+                          <li className="flex items-start gap-2"><span className="text-[#5a6d78] mt-0.5">•</span>4K/120fps slow motion</li>
+                          <li className="flex items-start gap-2"><span className="text-[#5a6d78] mt-0.5">•</span>Acrobatic & proximity capable</li>
+                        </ul>
+                      </div>
+
+                      {/* NEO Drone - Indoor */}
+                      <div className="rounded-2xl border border-neutral-200 bg-card p-6 hover:border-[#5a6d78] hover:shadow-lg transition-all duration-300">
+                        <div className="mb-1">
+                          <span className="text-[10px] font-medium text-[#7a9aa8] uppercase tracking-wider">Indoor / Slow Follow</span>
+                        </div>
+                        <div className="mb-5">
+                          <h3 className="text-lg font-medium tracking-tight text-primary">DJI NEO</h3>
+                          <p className="text-xs text-secondary mt-1">Indoor & follow specialist</p>
+                        </div>
+
+                        <div className="mb-5">
+                          <p className="text-sm text-secondary mb-2">Safe indoor flight & slow tracking</p>
+                          <p className="text-xs text-neutral-400">Interiors • Hospitality • BTS</p>
+                        </div>
+
+                        <div className="mb-5 pb-5 border-b border-neutral-100">
+                          <span className="text-2xl font-semibold tracking-tight text-[#5a6d78]">£80</span>
+                          <span className="text-sm text-secondary">/hr</span>
+                        </div>
+
+                        <ul className="space-y-2 text-sm text-secondary">
+                          <li className="flex items-start gap-2"><span className="text-[#5a6d78] mt-0.5">•</span>NEO wide-angle CMOS</li>
+                          <li className="flex items-start gap-2"><span className="text-[#5a6d78] mt-0.5">•</span>135g ultra-lightweight</li>
+                          <li className="flex items-start gap-2"><span className="text-[#5a6d78] mt-0.5">•</span>Prop guards, indoor-safe</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section className="px-6 py-20 md:py-24 md:px-12 lg:px-24 bg-[#f4f2ef]">
+                    <div className="max-w-7xl mx-auto">
+                      <div className="mb-10 md:mb-12 flex flex-col md:flex-row md:items-end justify-between gap-4">
+                        <div>
+                          <span className="font-mono text-xs uppercase tracking-[0.35em] text-[#5a6d78]">04 — Packages</span>
+                          <h2 className="mt-4 font-display text-3xl md:text-5xl tracking-tight text-[#3d5a66]">Project Pricing</h2>
+                        </div>
+                        <div className="flex gap-3">
+                          <button 
+                            onClick={() => {
+                              const container = document.getElementById('packages-carousel');
+                              if (container) container.scrollBy({ left: -300, behavior: 'smooth' });
+                            }}
+                            className="w-11 h-11 rounded-full bg-[#5a6d78] flex items-center justify-center hover:bg-[#4a5c66] transition-colors"
+                          >
+                            <span className="text-white text-lg">←</span>
+                          </button>
+                          <button 
+                            onClick={() => {
+                              const container = document.getElementById('packages-carousel');
+                              if (container) container.scrollBy({ left: 300, behavior: 'smooth' });
+                            }}
+                            className="w-11 h-11 rounded-full bg-[#5a6d78] flex items-center justify-center hover:bg-[#4a5c66] transition-colors"
+                          >
+                            <span className="text-white text-lg">→</span>
+                          </button>
+                        </div>
+                      </div>
+
+                    <div id="packages-carousel" className="flex gap-5 overflow-x-auto pb-2 snap-x snap-mandatory no-scrollbar">
+                      {[
+                        {
+                          id: "pkg-real-estate",
+                          title: "Real Estate",
+                          price: "£450",
+                          subtitle: "Property aerials",
+                          lines: ["Exterior aerials", "Property context", "Edit: Basic or Premium"],
+                        },
+                        {
+                          id: "pkg-automotive-cinematic",
+                          title: "Automotive - Cinematic",
+                          price: "£650",
+                          subtitle: "Rolling & hero shots",
+                          lines: ["Rolling shots", "Hero passes", "Edit: Basic or Premium"],
+                        },
+                        {
+                          id: "pkg-automotive-fpv",
+                          title: "Automotive - FPV",
+                          price: "£900",
+                          subtitle: "Chase sequences",
+                          lines: ["Close-proximity FPV chase", "Dynamic passes", "Edit: Basic or Premium"],
+                        },
+                        {
+                          id: "pkg-tourism",
+                          title: "Tourism & Hospitality",
+                          price: "£600",
+                          subtitle: "Destination coverage",
+                          lines: ["Exterior flyovers", "Location context", "Edit: Basic or Premium"],
+                        },
+                        {
+                          id: "pkg-construction",
+                          title: "Construction",
+                          price: "£450",
+                          subtitle: "Site documentation",
+                          lines: ["Site overview", "Progress documentation", "Edit: Basic or Premium"],
+                        },
+                        {
+                          id: "pkg-construction-addons",
+                          title: "Construction Add-ons",
+                          price: "Add-on",
+                          subtitle: "Extra services",
+                          lines: ["Scheduled repeat visits", "Annotated footage", "Raw archive delivery"],
+                        },
+                        {
+                          id: "pkg-events",
+                          title: "Events (Non-live)",
+                          price: "£550",
+                          subtitle: "Venue coverage",
+                          lines: ["Planned venue coverage", "Edit: Basic or Premium"],
+                        },
+                        {
+                          id: "pkg-marine",
+                          title: "Marine",
+                          price: "£700",
+                          subtitle: "Yacht & marina",
+                          lines: ["Yacht / marina flyarounds", "Edit: Basic or Premium"],
+                        },
+                      ].map((item) => (
+                        <div
+                          key={item.title}
+                          id={item.id}
+                          className="rounded-2xl border border-neutral-200 bg-card p-5 min-w-[260px] snap-center flex-shrink-0 hover:border-[#5a6d78] hover:shadow-md transition-all duration-300"
+                        >
+                          <div className="mb-3">
+                            <h4 className="text-base font-medium tracking-tight text-primary">{item.title}</h4>
+                            <p className="text-xs text-neutral-400">{item.subtitle}</p>
+                          </div>
+
+                          <div className="mb-3 pb-3 border-b border-neutral-100">
+                            <span className="text-lg font-semibold tracking-tight text-[#5a6d78]">{item.price}</span>
+                            <span className="text-xs text-secondary ml-1">starting</span>
+                          </div>
+
+                          <ul className="space-y-1.5 text-sm text-secondary">
+                            {item.lines.map((line) => (
+                              <li key={line} className="flex items-start gap-2">
+                                <span className="text-[#5a6d78] mt-0.5">•</span>{line}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="mt-12 grid gap-6 md:grid-cols-2">
+                      <div className="rounded-2xl border border-neutral-200 bg-card p-6 hover:border-[#5a6d78] hover:shadow-md transition-all duration-300">
+                        <h4 className="text-lg font-medium text-primary">Edit Options</h4>
+                        <div className="mt-4 space-y-4 text-sm">
+                          <div>
+                            <p className="font-medium text-primary">Basic Edit — included</p>
+                            <p className="text-secondary">Clean cut, music, colour correction</p>
+                          </div>
+                          <div>
+                            <p className="font-medium text-primary">Premium Edit — <span className="text-[#5a6d78]">+£200</span></p>
+                            <p className="text-secondary">Cinematic pacing, advanced colour grade, sound design, social-ready master</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="rounded-2xl border border-neutral-200 bg-card p-6 hover:border-[#5a6d78] hover:shadow-md transition-all duration-300">
+                        <h4 className="text-lg font-medium text-primary">Global Add-ons</h4>
+                        <ul className="mt-4 space-y-2 text-sm text-secondary list-disc pl-4">
+                          <li>Interior drone footage — <span className="text-[#5a6d78] font-medium">+£120</span></li>
+                          <li>FPV sequences (non-automotive) — <span className="text-[#5a6d78] font-medium">+£250</span></li>
+                          <li>Sunrise / sunset shoot — <span className="text-[#5a6d78] font-medium">+£150</span></li>
+                          <li>Multiple locations — <span className="text-[#5a6d78] font-medium">+£100 per location</span></li>
+                          <li>Extended shoot time — <span className="text-[#5a6d78] font-medium">hourly rates</span></li>
+                          <li>Raw footage delivery — <span className="text-[#5a6d78] font-medium">+£100</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="mt-6 rounded-2xl border border-neutral-200 bg-card p-6 hover:border-[#5a6d78] hover:shadow-md transition-all duration-300">
+                      <h4 className="text-lg font-medium text-primary">Multi-drone setups</h4>
+                      <p className="mt-2 text-sm text-secondary">Quoted per job.</p>
+                    </div>
+                    </div>
+                  </section>
+
+                  <section className="px-6 py-20 md:py-24 md:px-12 lg:px-24 bg-[#5a6d78]">
+                    <div className="max-w-7xl mx-auto">
+                      <div className="mb-10 md:mb-14">
+                        <span className="font-mono text-xs uppercase tracking-[0.35em] text-[#a8c4d4]">05 — Gallery</span>
+                        <h2 className="mt-4 font-display text-3xl md:text-5xl lg:text-6xl text-white">Recent Flights</h2>
+                        <p className="mt-4 text-sm text-white/70">Client-ready selects from our cinematic drone work.</p>
+                      </div>
+                      <div className="grid h-[35vh] md:h-[45vh] grid-cols-2 gap-3 md:gap-4 md:grid-cols-4">
                       {gallery.map((videoSrc, idx) => (
                         <div
                           key={videoSrc}
-                          className={`relative overflow-hidden rounded-xl ${idx % 2 === 1 ? "mt-10 md:mt-20" : ""}`}
+                          className="relative overflow-hidden rounded-xl h-full"
                         >
                           <video
-                            className="h-full w-full object-cover transition-all duration-700 hover:scale-105"
+                            className="h-full w-full object-cover"
                             autoPlay
                             muted
                             loop
@@ -621,17 +680,91 @@ export default function Home() {
                           >
                             <source src={videoSrc} type="video/mp4" />
                           </video>
-                          <span className="absolute bottom-3 left-3 font-mono text-[10px] uppercase tracking-[0.3em] text-white mix-blend-difference">
+                          <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/70 to-transparent" />
+                          <span className="absolute bottom-3 left-3 font-mono text-[11px] uppercase tracking-[0.2em] text-white font-medium">
                             {idx === 0 ? "Highland Trail" : idx === 1 ? "Forest Path" : idx === 2 ? "Still Waters" : "Yacht Glide"}
                           </span>
                         </div>
                       ))}
+                      </div>
                     </div>
                   </section>
 
-                  <section id="contact" className="relative flex h-[70vh] items-center justify-center bg-[#050505] px-6 text-white overflow-hidden">
-                    <canvas className="webgl-footer absolute inset-0 w-full h-full"></canvas>
-                  </section>
+                  {/* Footer */}
+                  <footer id="contact" className="relative bg-[#3d5a66] px-6 py-20 md:px-12 lg:px-24">
+                    <div className="max-w-7xl mx-auto">
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8">
+                        {/* Brand */}
+                        <div className="lg:col-span-1">
+                          <div className="flex items-center gap-3 mb-6">
+                            <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30">
+                              <span className="h-1.5 w-1.5 rounded-full bg-[#7a9aa8]" />
+                            </div>
+                            <span className="font-display text-xl tracking-tight text-white">APEX</span>
+                          </div>
+                          <p className="text-sm text-white/60 leading-relaxed">
+                            Cinema-grade drone cinematography for real estate, automotive, tourism, and marine projects across London and the UK.
+                          </p>
+                        </div>
+
+                        {/* Services */}
+                        <div>
+                          <h4 className="text-xs font-medium uppercase tracking-[0.2em] text-[#7a9aa8] mb-4">Services</h4>
+                          <ul className="space-y-2 text-sm text-white/60">
+                            <li><button onClick={() => { const el = document.getElementById('pkg-real-estate'); const carousel = document.getElementById('packages-carousel'); if (el && carousel) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); setTimeout(() => { carousel.scrollTo({ left: el.offsetLeft - carousel.offsetWidth / 2 + el.offsetWidth / 2, behavior: 'smooth' }); }, 500); }}} className="hover:text-white transition-colors text-left">Real Estate</button></li>
+                            <li><button onClick={() => { const el = document.getElementById('pkg-automotive-cinematic'); const carousel = document.getElementById('packages-carousel'); if (el && carousel) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); setTimeout(() => { carousel.scrollTo({ left: el.offsetLeft - carousel.offsetWidth / 2 + el.offsetWidth / 2, behavior: 'smooth' }); }, 500); }}} className="hover:text-white transition-colors text-left">Automotive</button></li>
+                            <li><button onClick={() => { const el = document.getElementById('pkg-tourism'); const carousel = document.getElementById('packages-carousel'); if (el && carousel) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); setTimeout(() => { carousel.scrollTo({ left: el.offsetLeft - carousel.offsetWidth / 2 + el.offsetWidth / 2, behavior: 'smooth' }); }, 500); }}} className="hover:text-white transition-colors text-left">Tourism & Hospitality</button></li>
+                            <li><button onClick={() => { const el = document.getElementById('pkg-construction'); const carousel = document.getElementById('packages-carousel'); if (el && carousel) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); setTimeout(() => { carousel.scrollTo({ left: el.offsetLeft - carousel.offsetWidth / 2 + el.offsetWidth / 2, behavior: 'smooth' }); }, 500); }}} className="hover:text-white transition-colors text-left">Construction</button></li>
+                            <li><button onClick={() => { const el = document.getElementById('pkg-events'); const carousel = document.getElementById('packages-carousel'); if (el && carousel) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); setTimeout(() => { carousel.scrollTo({ left: el.offsetLeft - carousel.offsetWidth / 2 + el.offsetWidth / 2, behavior: 'smooth' }); }, 500); }}} className="hover:text-white transition-colors text-left">Events</button></li>
+                            <li><button onClick={() => { const el = document.getElementById('pkg-marine'); const carousel = document.getElementById('packages-carousel'); if (el && carousel) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); setTimeout(() => { carousel.scrollTo({ left: el.offsetLeft - carousel.offsetWidth / 2 + el.offsetWidth / 2, behavior: 'smooth' }); }, 500); }}} className="hover:text-white transition-colors text-left">Marine</button></li>
+                          </ul>
+                        </div>
+
+                        {/* Contact */}
+                        <div>
+                          <h4 className="text-xs font-medium uppercase tracking-[0.2em] text-[#7a9aa8] mb-4">Contact</h4>
+                          <ul className="space-y-2 text-sm text-white/60">
+                            <li className="flex items-center gap-2">
+                              <span className="text-[#7a9aa8]">✉</span>
+                              <a href="mailto:hello@apeximaging.co.uk" className="hover:text-white transition-colors">hello@apeximaging.co.uk</a>
+                            </li>
+                            <li className="flex items-center gap-2">
+                              <span className="text-[#7a9aa8]">☎</span>
+                              <a href="tel:+447123456789" className="hover:text-white transition-colors">+44 7123 456 789</a>
+                            </li>
+                            <li className="flex items-start gap-2 mt-4">
+                              <span className="text-[#7a9aa8] mt-0.5">◎</span>
+                              <span>London & UK Wide<br />Available for international projects</span>
+                            </li>
+                          </ul>
+                        </div>
+
+                        {/* Legal & Social */}
+                        <div>
+                          <h4 className="text-xs font-medium uppercase tracking-[0.2em] text-[#7a9aa8] mb-4">Legal</h4>
+                          <ul className="space-y-2 text-sm text-white/60 mb-6">
+                            <li>CAA Registered Operator</li>
+                            <li>A2 CofC Certified Pilot</li>
+                            <li>£5M Public Liability Insurance</li>
+                          </ul>
+                          <div className="flex gap-3">
+                            <a href="#" className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-[#7a9aa8] transition-colors text-sm">in</a>
+                            <a href="#" className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-[#7a9aa8] transition-colors text-sm">ig</a>
+                            <a href="#" className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-[#7a9aa8] transition-colors text-sm">yt</a>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Bottom bar */}
+                      <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+                        <p className="text-xs text-white/40">© 2025 Apex Imaging. All rights reserved.</p>
+                        <div className="flex gap-6 text-xs text-white/40">
+                          <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+                          <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+                        </div>
+                      </div>
+                    </div>
+                  </footer>
                 </main>
               </div>
             );

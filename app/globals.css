@@ -1,21 +1,29 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #f6f7f4;
+  --bg: #f4f2ef;
+  --bg-warm: #e8eef3;
   --card: #ffffff;
-  --primary: #0f1411;
-  --secondary: #5b655f;
-  --border: rgba(15, 20, 17, 0.08);
+  --primary: #3d5a66;
+  --secondary: #5a6d78;
+  --border: rgba(90, 109, 120, 0.15);
+  --accent: #7a9aa8;
+  --accent-dark: #3d5a66;
 }
 
 body {
   background: var(--bg);
+  min-height: 100vh;
   color: var(--primary);
   font-family: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 .bg-bg {
   background-color: var(--bg);
+}
+
+.bg-warm {
+  background-color: var(--bg-warm);
 }
 
 .bg-card {
@@ -40,10 +48,19 @@ body {
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
 }
 
 ::selection {
-  background: #0f1411;
+  background: #5a6d78;
   color: #ffffff;
 }
 
@@ -207,4 +224,28 @@ html {
 
 .animate-marquee {
   animation: drift 30s linear infinite;
+}
+
+/* Custom scrollbar for carousels */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(98, 180, 135, 0.5) rgba(15, 26, 20, 0.3);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(15, 26, 20, 0.3);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(98, 180, 135, 0.5);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(98, 180, 135, 0.7);
 }

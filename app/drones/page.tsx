@@ -373,7 +373,7 @@ export default function PortfolioPage() {
           <div className="container-fluid">
             <div className="row justify-content-center">
               <div className="col-12 text-center">
-                <h1>Apex<br />Aerial</h1>
+                <h1>Apex<br />Imaging</h1>
               </div>
               <div className="col-12 text-center mb-2">
                 <div className="dancing"><span>portfolio</span></div>
@@ -382,7 +382,7 @@ export default function PortfolioPage() {
                 <p>
                   <span className="fpv hover-target">FPV</span>
                   <span className="cinematic hover-target">Cinematic</span>
-                  <span className="neo1 hover-target">Neo1</span>
+                  <span className="neo1 hover-target">Indoor</span>
                   <span className="camera hover-target">Camera Work</span>
                 </p>
               </div>
@@ -400,12 +400,12 @@ export default function PortfolioPage() {
               <h3>FPV</h3>
             </div>
             <div className="col-12 mt-3 text-center">
-              <p><span>High-Speed Racing Drone</span></p>
+              <p><span>DJI O4 Air Unit Pro</span></p>
             </div>
             <div className="col-12 text-center">
               <p>
-                Drone: FPV<br />
-                Use: Automotive • Action • Indoor
+                Camera: O4 FPV Camera (1/1.3″ CMOS)<br />
+                Use: Automotive • Action • Architecture
               </p>
             </div>
             <div className="col-12 text-center mt-4">
@@ -424,12 +424,12 @@ export default function PortfolioPage() {
               <h3>Cinematic</h3>
             </div>
             <div className="col-12 mt-3 text-center">
-              <p><span>Heavy-Lift Cinema Drone</span></p>
+              <p><span>DJI Mavic 2 Pro & DJI Mini 2 Pro</span></p>
             </div>
             <div className="col-12 text-center">
               <p>
-                Drone: Cinema platform<br />
-                Use: Film • Real Estate • Commercials
+                Cameras: Hasselblad L1D-20c & 1/1.3″ CMOS<br />
+                Use: Real Estate • Automotive • Tourism • Marine
               </p>
             </div>
             <div className="col-md-6 col-lg-4">
@@ -532,15 +532,15 @@ export default function PortfolioPage() {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 text-center">
-              <h3>Neo1</h3>
+              <h3>Indoor</h3>
             </div>
             <div className="col-12 mt-3 text-center">
-              <p><span>DJI Neo Indoor Specialist</span></p>
+              <p><span>DJI NEO</span></p>
             </div>
             <div className="col-12 text-center">
               <p>
-                Drone: Neo1<br />
-                Use: Indoor • Close Proximity • POV
+                Camera: NEO Camera Module (wide-angle CMOS)<br />
+                Use: Interiors • Hospitality • Close Proximity
               </p>
             </div>
             <div className="col-12 text-center mt-4">
@@ -559,12 +559,14 @@ export default function PortfolioPage() {
               <h3>Camera Work</h3>
             </div>
             <div className="col-12 mt-3 text-center">
-              <p><span>Our Finest Aerial Cinematography</span></p>
+              <p><span>Our Fleet Cameras</span></p>
             </div>
             <div className="col-12 text-center">
               <p>
-                Drone: Mixed fleet<br />
-                Use: Highlights across all platforms
+                DJI Mini 2 Pro — 1/1.3″ CMOS Camera Module<br />
+                DJI NEO — NEO Camera Module (wide-angle CMOS)<br />
+                DJI Mavic 2 Pro — Hasselblad L1D-20c<br />
+                DJI O4 Air Unit Pro — O4 FPV Camera (1/1.3″ CMOS)
               </p>
             </div>
             <div className="col-12 text-center mt-4">

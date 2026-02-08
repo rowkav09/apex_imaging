@@ -49,7 +49,7 @@ export default function Header() {
               <Link
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-white text-2xl md:text-3xl font-light hover:text-emerald-300 transition-colors"
+                className="text-white text-2xl md:text-3xl font-light hover:text-[#7a9aa8] transition-colors"
               >
                 {item.name}
               </Link>
@@ -60,7 +60,7 @@ export default function Header() {
         {/* Menu Close Button - Always accessible */}
         <button
           onClick={() => setMenuOpen(false)}
-          className="absolute top-40 right-8 z-[102] w-10 h-10 flex items-center justify-center hover:opacity-70 transition-opacity"
+          className="absolute top-[96px] right-5 z-[102] w-10 h-10 flex items-center justify-center hover:opacity-70 transition-opacity"
           aria-label="Close menu"
         >
           <div className="relative w-6 h-6">
@@ -96,7 +96,7 @@ export default function Header() {
             </button>
             <a
               href="/#contact"
-              className="group hidden md:flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-medium uppercase tracking-[0.2em] text-black transition-all duration-300 hover:bg-emerald-400"
+              className="group hidden md:flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-medium uppercase tracking-[0.2em] text-black transition-all duration-300 hover:bg-[#7a9aa8]"
             >
               Inquire
               <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
