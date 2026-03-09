@@ -29,13 +29,13 @@ export default function TeamPage() {
   return (
     <>
       <Header />
-      <div className="relative h-screen w-full overflow-hidden">
-        {/* Green base background */}
-        <div className="absolute inset-0 -z-20 bg-[#2d4a32] w-full h-full" />
+      <div className="relative min-h-screen w-full overflow-hidden bg-[#1a2e1f]">
+        {/* Natural dark green base background */}
+        <div className="absolute inset-0 -z-20 bg-[#1a2e1f] w-full h-full" />
         {/* Animated etheral-shadow overlay */}
         <div className="absolute inset-0 -z-10 pointer-events-none">
           <EtheralShadow
-            color="rgba(25, 50, 31, 0.55)"
+            color="rgba(18, 38, 22, 0.55)"
             animation={{ scale: 80, speed: 80 }}
             noise={{ opacity: 0.4, scale: 1.2 }}
             sizing="fill"
