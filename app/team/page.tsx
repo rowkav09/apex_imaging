@@ -29,20 +29,20 @@ export default function TeamPage() {
   return (
     <>
       <Header />
-      <div className="relative min-h-screen w-full overflow-hidden">
+      <div className="relative h-screen w-full overflow-hidden">
         {/* Green base background */}
-        <div className="absolute inset-0 -z-20 bg-[#355C3A] w-full h-full" />
+        <div className="absolute inset-0 -z-20 bg-[#2d4a32] w-full h-full" />
         {/* Animated etheral-shadow overlay */}
         <div className="absolute inset-0 -z-10 pointer-events-none">
           <EtheralShadow
-            color="rgba(34, 66, 42, 0.55)"
+            color="rgba(25, 50, 31, 0.55)"
             animation={{ scale: 80, speed: 80 }}
             noise={{ opacity: 0.4, scale: 1.2 }}
             sizing="fill"
             style={{ width: '100vw', height: '100vh', mixBlendMode: 'soft-light' }}
           />
         </div>
-        <main className="min-h-screen text-white py-20 px-4">
+        <main className="h-full text-white py-20 px-4 overflow-y-auto">
           <h1 className="text-4xl md:text-6xl font-extrabold text-center mb-12 tracking-tight">Meet the Team</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-7xl mx-auto">
             {team.map((member) => (
